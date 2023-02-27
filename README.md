@@ -1,14 +1,6 @@
-# Project
+# Dynamics 365 (D365) Business Central (BC) and Dataverse (DV) Integration
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
-
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+This repo is intended to be our one-stop-shop for D365 BC and DV integration that includes all types of bi/uni -directional, in/out -bound interactions, such as Data Sync, Virtual Table, Data (Created - Updated - Deleted) Events, and Business Events, where partners/customers can discuss our features, preview new ones, try sample code, and submit their ideas/feedbacks/questions/issues, while we can transparently prioritize and take them into our roadmap.
 
 ## Contributing
 
