@@ -1,4 +1,4 @@
-Codeunit 50100 MySubscriberFunction
+Codeunit 50100 MyBusinessEvents
 {
     var
         EventCategory: Enum EventCategory;
