@@ -162,7 +162,7 @@ Codeunit 50100 MyBusinessEvents
         end;
     end;
 
-    [ExternalBusinessEvent('SalesOrderReleased', 'Sales order released', 'This business event is triggered when a sales order is released to the internal warehouse/external logistics company, so they''re ready to pick and ship goods. This trigger occurs when the Release button is clicked on Sales Order page in BC.', EventCategory::"My Sales Events")]
+    [ExternalBusinessEvent('SalesOrderReleased', 'Sales order released', 'This business event is triggered when a sales order is released to the internal warehouse/external logistics company, so they''re ready to pick and ship goods. This trigger occurs when the Release button is clicked on Sales Order page in Business Central.', EventCategory::"My Sales Events")]
     local procedure MyBusinessEventSalesOrderReleased(PurchaseInvoiceId: Guid; Url: text[250])
     begin
     end;
@@ -179,7 +179,7 @@ Codeunit 50100 MyBusinessEvents
         end;
     end;
 
-    [ExternalBusinessEvent('PurchaseOrderReleased', 'Purchase order released', 'This business event is triggered when a purchase order is released to the internal warehouse/external logistics company, so they''re ready to receive goods coming their way. This trigger occurs when the Release button is clicked on Purchase Order page in BC.', EventCategory::"My Purchasing Events")]
+    [ExternalBusinessEvent('PurchaseOrderReleased', 'Purchase order released', 'This business event is triggered when a purchase order is released to the internal warehouse/external logistics company, so they''re ready to receive goods coming their way. This trigger occurs when the Release button is clicked on Purchase Order page in Business Central.', EventCategory::"My Purchasing Events")]
     local procedure MyBusinessEventPurchaseOrderReleased(PurchaseInvoiceId: Guid; Url: text[250])
     begin
     end;
