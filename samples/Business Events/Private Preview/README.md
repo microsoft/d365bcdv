@@ -31,4 +31,15 @@ You can easily build and install an extension that implements sample events for 
 ### Sample events for private preview
 | **Category** | **Name** | **Description** |
 |--------------|----------|-----------------|
-| My Accounts Payable Events | Purchase invoice posted | This business event is triggered when a vendor invoice is posted as part of the Procure-to-Pay process. | 
+| My Accounts Payable Events | Purchase invoice posted | This business event is triggered when a vendor invoice is posted as part of the Procure-to-Pay process. |
+| My Accounts Payable Events | Purchase payment posted | This business event is triggered when a vendor payment is posted as part of the Procure-to-Pay process. |
+| My Accounts Payable Events | Purchase receipt posted | This business event is triggered when goods from a purchase order are received by the internal warehouse/external logistics company. This can trigger Finance Department to post a purchase invoice. |
+| My Accounts Receivable Events | Customer blocked | This business event is triggered when a customer is blocked for shipping/invoicing. |
+| My Accounts Receivable Events | Customer unblocked | This business event is triggered when a customer is unblocked for shipping/invoicing. |
+| My Accounts Receivable Events | Sales credit limit exceeded | This business event is triggered when the credit limit for a customer is exceeded due to a posted sales invoice/changed credit limit for that customer. |
+| My Accounts Receivable Events | Sales credit memo posted | This business event is triggered when a sales credit memo is posted. |
+| My Accounts Receivable Events | Sales invoice posted | This business event is triggered when a sales invoice is posted as part of the Quote-to-Cash process. |
+| My Accounts Receivable Events | Sales payment posted | This business event is triggered when a customer payment is posted as part of the Quote-to-Cash process. |
+| My Accounts Receivable Events | Sales shipment posted | This business event is triggered when goods from a sales order are shipped by the internal warehouse/external logistics company. This can trigger Finance Department to post a sales invoice. |
+| My Purchasing Events | Purchase order released | This business event is triggered when a purchase order is released to the internal warehouse/external logistics company, so they're ready to receive goods coming their way. This trigger occurs when the Release button is clicked on Purchase Order page in Business Central. |
+| My Sales Events | Sales order released | This business event is triggered when a sales order is released to the internal warehouse/external logistics company, so they're ready to pick and ship goods. This trigger occurs when the Release button is clicked on Sales Order page in Business Central. |
