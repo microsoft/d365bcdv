@@ -1,4 +1,8 @@
-# Business Events on Business Central (Preview)
+#Business Events on Business Central (Preview)
 
-## Background
-This doc provides a review of Business Central’s integration with Dataverse, highlighting the new feature of business events on Business Central for notifying/triggering external systems, the prerequisites and step-by-step instructions to preview it, and its current limitations/future improvements.
+##Introducing business events
+Integrating w/ Dataverse enables Business Central to interact w/ other apps in its ecosystem.  There are four types of *complementary* interactions: Data Sync, virtual tables, data change (**C**reated/**U**pdated/**D**eleted) events, and business events.
+
+To review Business Central & Dataverse integration, see https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf
+
+This doc highlights the new feature of business events on Business Central for notifying/triggering external Dataverse/non-Dataverse systems, the prerequisites and step-by-step instructions to preview it, and its current limitations/future improvements.
