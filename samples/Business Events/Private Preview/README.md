@@ -26,9 +26,8 @@ To preview the new feature of business events on Business Central, you can/shoul
 1. Submit feedbacks/questions/issues from your preview to us. 
 
 ## Build and install an extension for sample events
-You can easily build and install an extension that implements sample events for private preview.
+You can easily build and install an extension that implements the following sample events for private preview:
 
-### Sample events for private preview
 | **Category** | **Name** | **Description** |
 |--------------|----------|-----------------|
 | My Accounts Payable Events | Purchase invoice posted | This business event is triggered when a vendor invoice is posted as part of the Procure-to-Pay process. |
@@ -43,3 +42,8 @@ You can easily build and install an extension that implements sample events for 
 | My Accounts Receivable Events | Sales shipment posted | This business event is triggered when goods from a sales order are shipped by the internal warehouse/external logistics company. This can trigger Finance Department to post a sales invoice. |
 | My Purchasing Events | Purchase order released | This business event is triggered when a purchase order is released to the internal warehouse/external logistics company, so they're ready to receive goods coming their way. This trigger occurs when the Release button is clicked on Purchase Order page in Business Central. |
 | My Sales Events | Sales order released | This business event is triggered when a sales order is released to the internal warehouse/external logistics company, so they're ready to pick and ship goods. This trigger occurs when the Release button is clicked on Sales Order page in Business Central. |
+
+To build an extension that implements those sample events for private preview, follow these steps:
+1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this folder.
+1. Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
+1. Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
