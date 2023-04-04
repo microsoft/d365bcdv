@@ -46,4 +46,7 @@ You can easily build and install an extension that implements the following samp
 To build an extension that implements those sample events for private preview, follow these steps:
 1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this folder.
 1. Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
+
+   ![Screenshot](../../../images/adding-files-to-project.png)
+   
 1. Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
