@@ -8,3 +8,5 @@ Integrating w/ Dataverse enables Business Central to interact w/ other apps in i
 To review Business Central & Dataverse integration, see https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf
 
 This doc highlights the new feature of business events on Business Central for notifying/triggering external Dataverse/non-Dataverse systems, the prerequisites and step-by-step instructions to preview it, and its current limitations/future improvements.
+
+![Screenshot](introducing-business-events.png)
