@@ -24,3 +24,11 @@ To preview the new feature of business events on Business Central, you can/shoul
 1. (OPTIONAL) Following our code, build and install your own extension that adds custom events to our catalog.  Use the same **Business Central Virtual Data Source Configuration** table to refresh our catalog with custom events on your Dataverse environment.
 1. (OPTIONAL) Query our catalog, submit subscriptions, and receive notifications of sample/custom events on your non-Dataverse environment.
 1. Submit feedbacks/questions/issues from your preview to us. 
+
+## Build and install an extension for sample events
+You can easily build and install an extension that implements sample events for private preview.
+
+### Sample events for private preview
+| **Category** | **Name** | **Description** |
+|--------------|----------|-----------------|
+| My Accounts Payable Events | Purchase invoice posted | This business event is triggered when a vendor invoice is posted as part of the Procure-to-Pay process. | 
