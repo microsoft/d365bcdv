@@ -97,7 +97,8 @@ codeunit 50102 MyCodeunit 
     local procedure OnPostDocument(var SalesHeader: Record "Sales Header"; var PostingCodeunitID: Integer; var Navigate: Enum "Navigate After Posting"; DocumentIsPosted: Boolean; var IsHandled: Boolean) 
     begin
     SalesOrderPosted(SalesHeader.SystemId, SalesHeader."Sell-to Customer Name", SalesHeader."No."); 
-    end;  
+    end;
+    
     [ExternalBusinessEvent('salesorderposted', 'Sales order posted', 'Triggered when sales order has been posted', EventCategory::"Sales")]
     [RequiredPermissions(PermissionObjectType::TableData, Database::"Sales Header", 'R')] // optional
     procedure SalesOrderPosted(salesOrderId: Guid; customerName: Text; orderNumber: Text)
