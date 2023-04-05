@@ -89,7 +89,7 @@ To build and install an extension that implements custom events, follow these st
 1.	Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
 1. Use the **Business Central Virtual Data Source Configuration** table to refresh our catalog with custom events on your Dataverse environment (see above).
 
-```al
+```AL
 enumextension 50101 MyEnumExtension extends EventCategory
 {
     value(0; "Sales")
@@ -126,10 +126,18 @@ The *Business Central Virtual Table (Preview)* plugin uses the same APIs to quer
 
 To query event definitions, you can use the *externalbusinessdefinitions* endpoint:
 
-```al
+```AL
 GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 "value": [
-    {"appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", "name": "salesorderposted", "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]", "displayName": "Sales order posted", "description": "Triggered when sales order has been posted", "category": "Sales", "appName": "MyBCExtension", "appPublisher": "Default publisher", "appVersion": "1.0.0.0"}
+    {"appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", 
+     "name": "salesorderposted", 
+     "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]", 
+     "displayName": "Sales order posted", 
+     "description": "Triggered when sales order has been posted", 
+     "category": "Sales", 
+     "appName": "MyBCExtension", 
+     "appPublisher": "Default publisher", 
+     "appVersion": "1.0.0.0"}
 ]
 ```
