@@ -106,7 +106,7 @@ codeunit 50102 MyCodeunit 
    [EventSubscriber(ObjectType::Page, Page::"Sales Order", 'OnPostDocumentBeforeNavigateAfterPosting', '', true, true)] 
    local procedure OnPostDocument(var SalesHeader: Record "Sales Header"; var PostingCodeunitID: Integer; var Navigate: Enum "Navigate After Posting"; DocumentIsPosted: Boolean; var IsHandled: Boolean) 
    begin
-   SalesOrderPosted(SalesHeader.SystemId, SalesHeader."Sell-to Customer Name", SalesHeader."No."); 
+      SalesOrderPosted(SalesHeader.SystemId, SalesHeader."Sell-to Customer Name", SalesHeader."No."); 
    end;
     
    [ExternalBusinessEvent('salesorderposted', 'Sales order posted', 'Triggered when sales order has been posted', EventCategory::"Sales")]
@@ -129,16 +129,15 @@ To query business event definitions, you can use the *externalbusinessdefinition
 ```yaml
 Request: GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
-Response:
-"value": [{
-    "category": "Sales",
-    "name": "salesorderposted",
-    "displayName": "Sales order posted",
-    "description": "Triggered when sales order has been posted",
-    "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]",
-    "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "appName": "MyBCExtension",
-    "appVersion": "1.0.0.0",
-    "appPublisher": "Default publisher"
+Response: "value": [{
+   "category": "Sales",
+   "name": "salesorderposted",
+   "displayName": "Sales order posted",
+   "description": "Triggered when sales order has been posted",
+   "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]",
+   "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+   "appName": "MyBCExtension",
+   "appVersion": "1.0.0.0",
+   "appPublisher": "Default publisher"
 }]
 ```
