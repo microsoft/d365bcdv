@@ -132,8 +132,7 @@ Request: GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 Response:
 ```
 ```json
-{
-    "value": [{
+"value": [{
     "category": "Sales",
     "name": "salesorderposted",
     "displayName": "Sales order posted",
@@ -143,5 +142,5 @@ Response:
     "appName": "MyBCExtension",
     "appVersion": "1.0.0.0",
     "appPublisher": "Default publisher",
-}]}
+}]
 ```
