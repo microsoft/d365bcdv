@@ -46,7 +46,7 @@ To build and install an extension that implements those sample events for privat
 1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this folder.
 1. Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
 
-![Screenshot](../../../images/adding-files-to-project.png)
+   ![Screenshot](../../../images/adding-files-to-project.png)
    
 1. Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
 
@@ -55,13 +55,13 @@ To connect your Business Central environment with a Dataverse environment, on wh
 1.	On Business Central app, select the **Settings** icon, select the **Assisted setup** item, and then select the **Set up a connection to Dataverse** item to open the **Dataverse Connection Setup** dialog.  
 1.	On that dialog, flip the **Enable virtual tables and events** switch on and select the **Next** button.
 
-![Screenshot](../../../images/dataverse-connection-setup.png)
+   ![Screenshot](../../../images/dataverse-connection-setup.png)
 
 1.	Review the relevant terms and conditions, flip the **I accept** switch on, and select the **Next** button again.
 1.	Specify your Dataverse environment URL, sign in as an administrator user, and select the **Next** button again.
 1.	Install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables event subscriptions/notifications on your Dataverse environment, make sure that you install the latest version that supports business events (**1.023093.3 or higher**), and finally select the **Finish** button.
 
-![Screenshot](../../../images/virtual-table-plugin.png)
+   ![Screenshot](../../../images/virtual-table-plugin.png)
 
 ## Refresh business event catalog 
 To refresh our business event catalog after installing your extension, follow these steps:
@@ -77,7 +77,7 @@ To query our catalog, submit subscriptions, and receive notifications of busines
 1.	Select the *Dynamics 365 Business Central* catalog, select one of the categories, such as *My Accounts Receivable Events*, select *(none)* as table name, and select one of the events to subscribe in that category, such as *Customer blocked*, as action name.
 1.	Select the **+ New step** button to continue your flows to process the received notifications.
 
-![Screenshot](../../../images/power-automate-flow.png)
+   ![Screenshot](../../../images/power-automate-flow.png)
 
 ## Build and install an extension for custom events
 To build and install an extension that implements custom events, follow these steps:
@@ -115,4 +115,22 @@ codeunit 50102 MyCodeunit 
     begin
     end;
 } 
+```
+
+## Query our catalog, submit subscriptions, and receive notifications of business events on non-Dataverse systems
+Business Central exposes specific APIs for business events that can be used to:
+- Query event definitions
+- Add/remove event subscriptions w/ your own webhook/notification URL
+The *Business Central Virtual Table (Preview)* plugin uses the same APIs to query our catalog and manage subscriptions of business events for Power Automate flows.
+
+To query event definitions, you can use the *externalbusinessdefinitions* endpoint:
+
+```AL
+GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
+
+"value": [
+    {        "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",        "name": "salesorderposted",        "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]",        "displayName": "Sales order posted",        "description": "Triggered when sales order has been posted",        "category": "Sales",        "appName": "MyBCExtension",        "appPublisher": "Default publisher",        "appVersion": "1.0.0.0"    }
+]
+![image](https://user-images.githubusercontent.com/40014527/229966158-845fb08a-cbb8-422e-bb15-1d3bf75589c5.png)
+
 ```
