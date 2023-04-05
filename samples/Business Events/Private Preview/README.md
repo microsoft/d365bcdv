@@ -124,11 +124,9 @@ Business Central exposes specific APIs for business events that can be used to:
 
 The *Business Central Virtual Table (Preview)* plugin uses the same APIs to query Business Central catalog and manage subscriptions of business events for Power Automate flows.
 
-To query business event definitions, you can use the *externalbusinessdefinitions* endpoint:
+To query business event definitions, you can use the *externalbusinessdefinitions* endpoint: GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 ```json
-GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
-
 "value": [{
     "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "name": "salesorderposted",
