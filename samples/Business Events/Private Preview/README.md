@@ -130,7 +130,6 @@ To query business event definitions, you can use the *externalbusinessdefinition
 {
     "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "name": "salesorderposted",
-    "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]",
     "displayName": "Sales order posted",
     "description": "Triggered when sales order has been posted",
     "category": "Sales",
