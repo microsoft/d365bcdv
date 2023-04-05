@@ -7,7 +7,7 @@ Integrating w/ Dataverse enables Business Central to interact w/ other apps in i
 
 To review Business Central & Dataverse integration, see https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf
 
-This doc highlights the new feature of business events on Business Central for notifying/triggering external Dataverse/non-Dataverse systems, the prerequisites and step-by-step instructions to preview it, as well as its current limitations/future improvements.
+This article highlights the new feature of business events on Business Central for notifying/triggering external Dataverse/non-Dataverse systems, the prerequisites and step-by-step instructions to preview it, as well as its current limitations/future improvements.
 
 ![Screenshot](../../../images/introducing-business-events.png)
 
@@ -17,7 +17,7 @@ To preview the new feature of business events on Business Central, you can/shoul
 1. Fill out our survey: https://forms.office.com/r/GkvB6pritG.  Let us know which sample/custom events you’ll try/build in private preview, which additional events we should add for public preview, in which scenarios do you want to use these events, your *Azure Active Directory tenant ID + Business Central environment name* for us to enable for private preview, and your email contact for us to follow up.
 1. Explore our GitHub repository: https://github.com/microsoft/d365bcdv, which is being prepared as a one-stop-shop for Business Central & Dataverse integration, and collect source files for building an extension that implements our *Dynamics 365 Business Central* catalog of sample events.
 1. Build and install the extension on your Business Central environment that we’ve enabled for private preview.
-1. On Business Central app, use the assisted setup to connect your Business Central environment with a Dataverse environment, on which you want to submit subscriptions and receive notifications of sample events.  This will guide you to install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables event subscriptions/notifications on your Dataverse environment.  Make sure that you install the latest version of the plugin that supports business events (**1.023093.3 or higher**).
+1. On Business Central app, use the assisted setup to connect your Business Central environment with a Dataverse environment, on which you want to submit subscriptions and receive notifications of sample events.  This will guide you to install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables event subscriptions/notifications on your Dataverse environment.  Make sure that you install the latest version that supports business events (**1.023093.3 or higher**).
 1. On Power Apps maker portal, find and edit the **Business Central Virtual Data Source Configuration** table to refresh our catalog with sample events on your Dataverse environment.
 1. On Power Apps maker portal, create Power Automate flows with the **When an action is performed** trigger that query our catalog, submit subscriptions, and receive notifications of sample events on your Dataverse environment.
 1. (OPTIONAL) Following our code, build and install your own extension that adds custom events to our catalog.  Use the same **Business Central Virtual Data Source Configuration** table to refresh our catalog with custom events on your Dataverse environment.
@@ -53,21 +53,20 @@ To build an extension that implements those sample events for private preview, f
 ## Connect Business Central to Dataverse 
 To connect your Business Central environment with a Dataverse environment, on which you want to submit subscriptions and receive notifications of sample events, follow these steps:
 1.	On Business Central app, select the **Settings** icon, select the **Assisted setup** item, and then select the **Set up a connection to Dataverse** item to open the **Dataverse Connection Setup** dialog.  
-2.	On that dialog, flip the **Enable virtual tables and events** switch on and select the **Next** button.
+1.	On that dialog, flip the **Enable virtual tables and events** switch on and select the **Next** button.
 
+![Screenshot](../../../images/dataverse-connection-setup.png)
 
+1.	Review the relevant terms and conditions, flip the **I accept** switch on, and select the **Next** button again.
+1.	Specify your Dataverse environment URL, sign in as an administrator user, and select the **Next** button again.
+1.	Install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables event subscriptions/notifications on your Dataverse environment, make sure that you install the latest version that supports business events (**1.023093.3 or higher**), and finally select the **Finish** button.
 
-4.	Review the relevant terms and conditions, flip the **I accept** switch on, and select the **Next** button again.
-5.	Specify your Dataverse environment URL, sign in as an administrator user, and select the **Next** button again.
-6.	Install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables event subscriptions/notifications on your Dataverse environment, make sure that you install the latest version that supports business events (**1.023093.3 or higher**), and finally select the **Finish** button.
-
-
+![Screenshot](../../../images/virtual-table-plugin.png)
 
 ## Refresh business event catalog 
 To refresh our business event catalog after installing your extension, follow these steps:
 1.	On Power Apps maker portal, select the **Tables** section, search for the **Business Central Virtual Data Source Configuration** table under the **All** tab, and select it.
-2.	Select the **Edit** button, select the **Business Central** row, and select the **Edit row using form** button to open a form.
-3.	Select the **Refresh Business Event Catalog** button.
+1.	Select the **Edit** button, select the **Business Central** row, and select the **Edit row using form** button to open a form.
+1.	Select the **Refresh Business Event Catalog** button on that form.
 
- 
-
+![Screenshot](../../../images/refresh-business-event-catalog.png
