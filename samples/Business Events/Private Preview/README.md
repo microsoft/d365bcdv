@@ -127,7 +127,7 @@ The *Business Central Virtual Table (Preview)* plugin uses the same APIs to quer
 To query business event definitions, you can use the *externalbusinessdefinitions* endpoint: GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 ```json
-"value": [{
+{
     "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "name": "salesorderposted",
     "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]",
@@ -137,5 +137,5 @@ To query business event definitions, you can use the *externalbusinessdefinition
     "appName": "MyBCExtension",
     "appPublisher": "Default publisher",
     "appVersion": "1.0.0.0"
-}]
+}
 ```
