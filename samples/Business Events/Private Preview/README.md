@@ -141,6 +141,6 @@ Response:
     "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "appName": "MyBCExtension",
     "appVersion": "1.0.0.0",
-    "appPublisher": "Default publisher",
+    "appPublisher": "Default publisher"
 }]
 ```
