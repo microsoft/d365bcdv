@@ -144,4 +144,16 @@ Response:
     "appVersion": "1.0.0.0",
     "this-json": "looks awesome..."
 }
+
+"value": [{
+	"appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+	"appName": "MyBCExtension",
+	"appVersion": "1.0.0.0”
+	"appPublisher": "Default publisher",
+	"category": "Sales",
+	"name": "salesorderposted",
+	"displayName": "Sales order posted",
+	"description": "Triggered when sales order has been posted",
+	"payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]"
+}]
 ```
