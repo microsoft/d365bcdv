@@ -133,6 +133,7 @@ Response:
 ```
 ```yaml
 {
-   "this-json": "looks awesome..."
+    "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "this-json": "looks awesome..."
 }
 ```
