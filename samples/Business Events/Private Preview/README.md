@@ -126,7 +126,7 @@ The *Business Central Virtual Table (Preview)* plugin uses the same APIs to quer
 
 To query business event definitions, you can use the *externalbusinessdefinitions* endpoint:
 
-```code
+```json
 GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 "value": [
