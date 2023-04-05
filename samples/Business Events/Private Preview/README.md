@@ -131,7 +131,7 @@ Request: GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 Response:
 ```
-```javascript
+```yaml
 "value": [{
     "category": "Sales",
     "name": "salesorderposted",
