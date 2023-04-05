@@ -79,7 +79,7 @@ To query our catalog, submit subscriptions, and receive notifications of busines
 
 ![Screenshot](../../../images/power-automate-flow.png)
 
-```json
+```al
 enumextension 50101 MyEnumExtension extends EventCategory
 {
     value(0; "Sales")
