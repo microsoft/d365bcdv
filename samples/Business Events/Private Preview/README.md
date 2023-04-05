@@ -126,31 +126,13 @@ The *Business Central Virtual Table (Preview)* plugin uses the same APIs to quer
 
 To query business event definitions, you can use the *externalbusinessdefinitions* endpoint:
 
-```json
+```code
 Request: GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 Response:
-"value": "[{
-    "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "name": "salesorderposted",
-    "displayName": "Sales order posted",
-    "description": "Triggered when sales order has been posted",
-    "category": "Sales",
-    "appName": "MyBCExtension",
-    "appPublisher": "Default publisher",
-    "appVersion": "1.0.0.0",
-    "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]"
-}]"
 ```
 ```yaml
 {
-   "this-json": "looks awesome...",
-   "name": "salesorderposted",
-   "displayName": "Sales order posted",
-   "description": "Triggered when sales order has been posted",
-   "category": "Sales",
-   "appName": "MyBCExtension",
-   "appPublisher": "Default publisher",
-   "appVersion": "1.0.0.0"
+   "this-json": "looks awesome..."
 }
 ```
