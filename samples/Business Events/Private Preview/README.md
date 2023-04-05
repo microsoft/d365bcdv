@@ -130,14 +130,15 @@ To query event definitions, you can use the *externalbusinessdefinitions* endpoi
 GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 "value": [
-    {"appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx", 
-     "name": "salesorderposted", 
-     "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]", 
-     "displayName": "Sales order posted", 
-     "description": "Triggered when sales order has been posted", 
-     "category": "Sales", 
-     "appName": "MyBCExtension", 
-     "appPublisher": "Default publisher", 
-     "appVersion": "1.0.0.0"}
-]
+{
+    "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "name": "salesorderposted",
+    "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]",
+    "displayName": "Sales order posted",
+    "description": "Triggered when sales order has been posted",
+    "category": "Sales",
+    "appName": "MyBCExtension",
+    "appPublisher": "Default publisher",
+    "appVersion": "1.0.0.0"
+}]
 ```
