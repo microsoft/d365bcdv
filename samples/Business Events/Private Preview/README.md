@@ -42,7 +42,7 @@ You can easily build and install an extension that implements the following samp
 | My Purchasing Events | Purchase order released | This business event is triggered when a purchase order is released to the internal warehouse/external logistics company, so they're ready to receive goods coming their way. This trigger occurs when the Release button is clicked on Purchase Order page in Business Central. |
 | My Sales Events | Sales order released | This business event is triggered when a sales order is released to the internal warehouse/external logistics company, so they're ready to pick and ship goods. This trigger occurs when the Release button is clicked on Sales Order page in Business Central. |
 
-To build an extension that implements those sample events for private preview, follow these steps:
+To build and install an extension that implements those sample events for private preview, follow these steps:
 1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this folder.
 1. Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
 
@@ -55,13 +55,13 @@ To connect your Business Central environment with a Dataverse environment, on wh
 1.	On Business Central app, select the **Settings** icon, select the **Assisted setup** item, and then select the **Set up a connection to Dataverse** item to open the **Dataverse Connection Setup** dialog.  
 1.	On that dialog, flip the **Enable virtual tables and events** switch on and select the **Next** button.
 
-![Screenshot](../../../images/dataverse-connection-setup.png)
+   ![Screenshot](../../../images/dataverse-connection-setup.png)
 
 1.	Review the relevant terms and conditions, flip the **I accept** switch on, and select the **Next** button again.
 1.	Specify your Dataverse environment URL, sign in as an administrator user, and select the **Next** button again.
 1.	Install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables event subscriptions/notifications on your Dataverse environment, make sure that you install the latest version that supports business events (**1.023093.3 or higher**), and finally select the **Finish** button.
 
-![Screenshot](../../../images/virtual-table-plugin.png)
+   ![Screenshot](../../../images/virtual-table-plugin.png)
 
 ## Refresh business event catalog 
 To refresh our business event catalog after installing your extension, follow these steps:
@@ -69,7 +69,7 @@ To refresh our business event catalog after installing your extension, follow th
 1.	Select the **Edit** button, select the **Business Central** row, and select the **Edit row using form** button to open a form.
 1.	Select the **Refresh Business Event Catalog** button on that form.
 
-![Screenshot](../../../images/refresh-business-event-catalog.png)
+   ![Screenshot](../../../images/refresh-business-event-catalog.png)
 
 ## Query our catalog, submit subscriptions, and receive notifications of business events on Dataverse 
 To query our catalog, submit subscriptions, and receive notifications of business events on your Dataverse environment, follow these steps:
@@ -77,9 +77,18 @@ To query our catalog, submit subscriptions, and receive notifications of busines
 1.	Select the *Dynamics 365 Business Central* catalog, select one of the categories, such as *My Accounts Receivable Events*, select *(none)* as table name, and select one of the events to subscribe in that category, such as *Customer blocked*, as action name.
 1.	Select the **+ New step** button to continue your flows to process the received notifications.
 
-![Screenshot](../../../images/power-automate-flow.png)
+   ![Screenshot](../../../images/power-automate-flow.png)
 
-```al
+## Build and install an extension for custom events
+To build and install an extension that implements custom events, follow these steps:
+1.	In relevant files, create a procedure with empty body.
+1.	Add the *ExternalBusinessEvent* attribute to define the event name, display name, description, and category.
+1.	Add the optional *RequiredPermissions* attribute to enforce additional permissions for users to subscribe to this event.
+1.	Add the required parameters to define the event payload.
+1.	Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
+1.	Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
+
+```AL
 enumextension 50101 MyEnumExtension extends EventCategory
 {
     value(0; "Sales")
