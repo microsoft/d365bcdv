@@ -128,7 +128,7 @@ To query business event definitions, you can use the *externalbusinessdefinition
 
 ```json
 {
-    "name": "salesorderposted",
-    "appVersion": "1.0.0.0"
+    "name":"salesorderposted",
+    "appVersion":"1.0.0.0"
 }
 ```
