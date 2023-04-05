@@ -130,7 +130,7 @@ To query business event definitions, you can use the *externalbusinessdefinition
 Request: GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 Response:
-"value": [{
+"value": "[{
     "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "name": "salesorderposted",
     "displayName": "Sales order posted",
@@ -140,7 +140,7 @@ Response:
     "appPublisher": "Default publisher",
     "appVersion": "1.0.0.0",
     "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]"
-}]
+}]"
 ```
 ```yaml
 {
