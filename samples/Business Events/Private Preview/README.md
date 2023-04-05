@@ -132,3 +132,8 @@ To query business event definitions, you can use the *externalbusinessdefinition
     "appVersion":"1.0.0.0"
 }
 ```
+```yaml
+{
+   "this-json": "looks awesome..."
+}
+```
