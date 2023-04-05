@@ -70,3 +70,11 @@ To refresh our business event catalog after installing your extension, follow th
 1.	Select the **Refresh Business Event Catalog** button on that form.
 
 ![Screenshot](../../../images/refresh-business-event-catalog.png)
+
+## Query our catalog, submit subscriptions, and receive notifications of business events on Dataverse 
+To query our catalog, submit subscriptions, and receive notifications of business events on your Dataverse environment, follow these steps:
+1.	On Power Apps maker portal, create Power Automate flows with the **When an action is performed** trigger.
+1.	Select the *Dynamics 365 Business Central* catalog, select one of the categories, such as *My Accounts Receivable Events*, select *(none)* as table name, and select one of the events in that category, such as *Customer blocked*, as action name.
+1.	Select the **+ New step** button to continue your flows to process the received notifications.
+
+![Screenshot](../../../images/power-automate-flow.png)
