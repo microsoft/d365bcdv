@@ -145,14 +145,6 @@ Response:
 ```yaml
 {
    "this-json": "looks awesome...",
-   "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-   "name": "salesorderposted",
-   "displayName": "Sales order posted",
-   "description": "Triggered when sales order has been posted",
-   "category": "Sales",
-   "appName": "MyBCExtension",
-   "appPublisher": "Default publisher",
-   "appVersion": "1.0.0.0",
-   "payload": "[{\"Index\":0,\"Name\":\"salesOrderId\",\"Type\":\"Guid\"},{\"Index\":1,\"Name\":\"customerName\",\"Type\":\"Text\"},{\"Index\":2,\"Name\":\"orderNumber\",\"Type\":\"Text\"}]"
+   "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 ```
