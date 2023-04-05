@@ -69,4 +69,4 @@ To refresh our business event catalog after installing your extension, follow th
 1.	Select the **Edit** button, select the **Business Central** row, and select the **Edit row using form** button to open a form.
 1.	Select the **Refresh Business Event Catalog** button on that form.
 
-![Screenshot](../../../images/refresh-business-event-catalog.png
+![Screenshot](../../../images/refresh-business-event-catalog.png)
