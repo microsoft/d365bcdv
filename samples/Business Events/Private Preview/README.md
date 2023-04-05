@@ -89,7 +89,7 @@ To build and install an extension that implements custom events, follow these st
 1.	Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
 1. Use the **Business Central Virtual Data Source Configuration** table to refresh our catalog with custom events on your Dataverse environment (see above).
 
-```code
+```al
 enumextension 50101 MyEnumExtension extends EventCategory
 {
     value(0; "Sales")
@@ -126,7 +126,7 @@ The *Business Central Virtual Table (Preview)* plugin uses the same APIs to quer
 
 To query event definitions, you can use the *externalbusinessdefinitions* endpoint:
 
-```code
+```al
 GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 "value": [
