@@ -78,3 +78,30 @@ To query our catalog, submit subscriptions, and receive notifications of busines
 1.	Select the **+ New step** button to continue your flows to process the received notifications.
 
 ![Screenshot](../../../images/power-automate-flow.png)
+
+```json
+enumextension 50101 MyEnumExtension extends EventCategory
+{
+    value(0; "Sales")
+    {
+    }
+}
+
+codeunit 50102 MyCodeunit 
+{ 
+    trigger OnRun()
+    begin
+    end; 
+
+    [EventSubscriber(ObjectType::Page, Page::"Sales Order", 'OnPostDocumentBeforeNavigateAfterPosting', '', true, true)] 
+    local procedure OnPostDocument(var SalesHeader: Record "Sales Header"; var PostingCodeunitID: Integer; var Navigate: Enum "Navigate After Posting"; DocumentIsPosted: Boolean; var IsHandled: Boolean) 
+    begin
+    SalesOrderPosted(SalesHeader.SystemId, SalesHeader."Sell-to Customer Name", SalesHeader."No."); 
+    end;  
+    [ExternalBusinessEvent('salesorderposted', 'Sales order posted', 'Triggered when sales order has been posted', EventCategory::"Sales")]
+    [RequiredPermissions(PermissionObjectType::TableData, Database::"Sales Header", 'R')] // optional
+    procedure SalesOrderPosted(salesOrderId: Guid; customerName: Text; orderNumber: Text)
+    begin
+    end;
+} 
+```
