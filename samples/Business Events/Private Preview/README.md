@@ -128,13 +128,7 @@ To query business event definitions, you can use the *externalbusinessdefinition
 
 ```json
 {
-    "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "name": "salesorderposted",
-    "displayName": "Sales order posted",
-    "description": "Triggered when sales order has been posted",
-    "category": "Sales",
-    "appName": "MyBCExtension",
-    "appPublisher": "Default publisher",
     "appVersion": "1.0.0.0"
 }
 ```
