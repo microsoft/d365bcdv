@@ -121,11 +121,12 @@ codeunit 50102 MyCodeunit 
 Business Central exposes specific APIs for business events that can be used to:
 - Query event definitions
 - Add/remove event subscriptions w/ your own webhook/notification URL
+
 The *Business Central Virtual Table (Preview)* plugin uses the same APIs to query our catalog and manage subscriptions of business events for Power Automate flows.
 
 To query event definitions, you can use the *externalbusinessdefinitions* endpoint:
 
-```AL
+```JSON
 GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
 
 "value": [
