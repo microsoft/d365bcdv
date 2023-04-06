@@ -223,3 +223,9 @@ This request must contain the following data:
 - *clientState*: The optional string associated with this business event subscription that can be used to validate any caller’s posting to the notification URL
 
 Subscribers must still have READ access to the *ExternalBusinessEventDefinition* table in subscribed companies.  Additionally, they must still have relevant access in the subscribed companies as defined by the optional *RequiredPermissions* attribute.
+
+## Current limitations and future improvements
+These are the current limitations for business events on Business Central that will be removed/improved in the near future:
+
+1.	Business Central’s *companyId* property isn’t included when submitting subscriptions and receiving notifications of business events for now.
+1.	When creating Power Automate flows with the **When an action is performed** trigger, you can’t select specific companies to subscribe for their business events, so business event subscriptions are submitted for all companies accessible to you for now.
