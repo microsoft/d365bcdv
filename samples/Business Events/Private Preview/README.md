@@ -7,11 +7,11 @@ Integrating w/ Dataverse enables Business Central to interact w/ other apps in i
 
 To review Business Central & Dataverse integration, see https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf
 
-We've introduced the new feature of business events to preview in *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).  It provides our partners/customers a mechanism for notifying/triggering their external Dataverse/non-Dataverse systems when actions are performed on Business Central, so their systems can react/perform other actions in response.  On Dataverse, they can use Power Automate to subscribe to Business Central for its business events and react on complementary apps in its ecosystem, such as Dynamics 365 Sales/Customer Service and other CRM apps built using Power Apps.  They can also react on non-Dataverse systems, such as 3rd party fulfillment/warehouse management/e-invoicing services.
-
-This article highlights the new feature of business events, the prerequisites and step-by-step instructions to preview it, as well as its current limitations/future improvements.
+We've introduced the new feature of business events to preview in *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).  It provides our partners/customers a mechanism for notifying/triggering their external Dataverse/non-Dataverse systems when actions are performed on Business Central, so their external systems can react/perform other actions in response.  On Dataverse, they can use Power Automate to subscribe to Business Central for its business events and react on other apps in its ecosystem, such as Dynamics 365 Sales/Customer Service and others built using Power Apps.  They can also react on non-Dataverse systems, such as 3rd party fulfillment/warehouse management/e-invoicing services.
 
 ![Screenshot](../../../images/introducing-business-events.png)
+
+This article highlights the new feature of business events, the prerequisites and step-by-step instructions to preview it, as well as its current limitations/future improvements.
 
 ## Prerequisites and step-by-step instructions
 To preview the new feature of business events on Business Central, you can/should:
@@ -75,7 +75,7 @@ To refresh our business event catalog after installing your extension, follow th
 
 ## Query Business Central catalog, submit subscriptions, and receive notifications of business events on Dataverse 
 To query Business Central catalog, submit subscriptions, and receive notifications of business events on your Dataverse environment, follow these steps:
-1.	On Power Apps maker portal, create Power Automate flows with the **When an action is performed** trigger.
+1.	On Power Apps maker portal, select the **Flows** section and create Power Automate flows with the **When an action is performed** trigger.
 1.	Select the *Dynamics 365 Business Central* catalog, select one of the categories, such as *My Accounts Receivable Events*, select *(none)* as table name, and select one of the business events to subscribe in that category, such as *Customer blocked*, as action name.
 1.	Select the **+ New step** button to continue your flows to process the received notifications.
 
@@ -234,3 +234,4 @@ These are the current limitations for business events on Business Central that w
 
 1.	Business Central’s *companyId* property isn’t included when submitting subscriptions and receiving notifications of business events for now.
 1.	When creating Power Automate flows with the **When an action is performed** trigger, you can’t select specific companies to subscribe for their business events, so business event subscriptions are submitted for all companies accessible to you for now.
+1. Translation and versioning for business events aren’t supported for now.
