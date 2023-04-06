@@ -43,7 +43,7 @@ You can easily build and install an extension that implements the following samp
 | My Sales Events | Sales order released | This business event is triggered when a sales order is released to the internal warehouse/external logistics company, so they're ready to pick and ship goods. This trigger occurs when the Release button is clicked on Sales Order page in Business Central. |
 
 To build and install an extension that implements those sample business events for private preview, follow these steps:
-1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this folder.
+1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this private preview folder.
 1. Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
 
    ![Screenshot](../../../images/adding-files-to-project.png)
@@ -81,10 +81,13 @@ To query Business Central catalog, submit subscriptions, and receive notificatio
 
 ## Build and install an extension for custom business events
 To build and install an extension that implements custom business events, follow these steps:
-1.	In relevant files, create a procedure with empty body.
+1.	Identify/create relevant AL files to code your custom business events.
+1.	Identify existing categories for your custom business events or create new ones using the extensible enum.
+1.	Create a procedure with empty body for each custom business event.
 1.	Add the *ExternalBusinessEvent* attribute to define the business event name, display name, description, and category.
-1.	Add the optional *RequiredPermissions* attribute to enforce additional permissions for users to subscribe to this business event.
+1.	Add the optional *RequiredPermissions* attribute to enforce additional permissions for users to subscribe.
 1.	Add the required parameters to define the business event payload.
+1.	Identify a specific AL event to subscribe and invoke the custom business event procedure w/ appropriate parameters when it occurs.
 1.	Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
 1.	Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
 1. Use the **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with custom business events on your Dataverse environment (see above).
@@ -103,17 +106,17 @@ codeunit 50102 MyCodeunit 
    begin
    end; 
 
-   [EventSubscriber(ObjectType::Page, Page::"Sales Order", 'OnPostDocumentBeforeNavigateAfterPosting', '', true, true)] 
-   local procedure OnPostDocument(var SalesHeader: Record "Sales Header"; var PostingCodeunitID: Integer; var Navigate: Enum "Navigate After Posting"; DocumentIsPosted: Boolean; var IsHandled: Boolean) 
-   begin
-      SalesOrderPosted(SalesHeader.SystemId, SalesHeader."Sell-to Customer Name", SalesHeader."No."); 
-   end;
-
    [ExternalBusinessEvent('salesorderposted', 'Sales order posted', 'Triggered when sales order has been posted', EventCategory::"Sales")]
    [RequiredPermissions(PermissionObjectType::TableData, Database::"Sales Header", 'R')] // optional
    procedure SalesOrderPosted(salesOrderId: Guid; customerName: Text; orderNumber: Text)
    begin
    end;
+   
+   [EventSubscriber(ObjectType::Page, Page::"Sales Order", 'OnPostDocumentBeforeNavigateAfterPosting', '', true, true)] 
+   local procedure OnPostDocument(var SalesHeader: Record "Sales Header"; var PostingCodeunitID: Integer; var Navigate: Enum "Navigate After Posting"; DocumentIsPosted: Boolean; var IsHandled: Boolean) 
+   begin
+      SalesOrderPosted(SalesHeader.SystemId, SalesHeader."Sell-to Customer Name", SalesHeader."No."); 
+   end;
 } 
 ```
 
