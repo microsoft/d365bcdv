@@ -7,13 +7,15 @@ Integrating w/ Dataverse enables Business Central to interact w/ other apps in i
 
 To review Business Central & Dataverse integration, see https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf
 
-This article highlights the new feature of business events on Business Central for notifying/triggering external Dataverse/non-Dataverse systems, the prerequisites and step-by-step instructions to preview it, as well as its current limitations/future improvements.
+We've introduced the new feature of business events to preview in *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).  It provides our partners/customers a mechanism for notifying/triggering their external Dataverse/non-Dataverse systems when actions are performed on Business Central, so their systems can react/perform other actions in response.  On Dataverse, they can use Power Automate to subscribe to Business Central for its business events and react on complementary apps in its ecosystem, such as Dynamics 365 Sales/Customer Service and other CRM apps built using Power Apps.  They can also react on non-Dataverse systems, such as 3rd party fulfillment/warehouse management/e-invoicing services.
+
+This article highlights the new feature of business events, the prerequisites and step-by-step instructions to preview it, as well as its current limitations/future improvements.
 
 ![Screenshot](../../../images/introducing-business-events.png)
 
 ## Prerequisites and step-by-step instructions
 To preview the new feature of business events on Business Central, you can/should:
-1. Create/upgrade a Business Central environment with the new *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).
+1. Create/upgrade a Business Central environment with *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).
 1. Fill out our survey: https://forms.office.com/r/GkvB6pritG.  Let us know which sample/custom business events you’ll try/build in private preview, which additional business events we should add for public preview, in which scenarios do you want to use these business events, your *Azure Active Directory tenant ID + Business Central environment name* for us to enable for private preview, and your email contact for us to follow up.
 1. Explore our GitHub repository: https://github.com/microsoft/d365bcdv, which is being prepared as a one-stop-shop for Business Central & Dataverse integration, and collect source files for building an extension that implements our *Dynamics 365 Business Central* catalog of sample business events.
 1. Build and install the extension on your Business Central environment that we’ve enabled for private preview.
@@ -216,7 +218,7 @@ Request: POST https://webhook.site/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 }
 ```
 
-This request must contain the following data:
+This request will contain the following data:
 - *initiatingUserAADObjectId*: The Azure Active Directory object ID of user who initiated this business event
 - *timestamp*: The timestamp when this business event occurred (UTC)
 - *companyName*: The name of company where this business event occurred
