@@ -1,11 +1,11 @@
 # Business Events on Business Central (Preview)
 
 ## Introducing business events
-Integrating w/ Dataverse enables Business Central to interact w/ other apps in its ecosystem, see [Review of Business Central & Dataverse integration](https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf).  There are four types of *complementary* interactions: Data Sync, virtual tables, data change (**C**reated/**U**pdated/**D**eleted) events, and business events.
+Integrating w/ Dataverse enables Business Central to interact w/ other apps in its ecosystem, see [a review of Business Central & Dataverse integration](https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf).  There are four types of complementary app/system interactions: Data Sync, virtual tables, data change (**C**reated/**U**pdated/**D**eleted) events, and business events.
 
 ![Screenshot](../../../images/four-complementary-interactions.png)
 
-We've introduced the new feature of business events to preview in *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).  It provides our partners/customers a mechanism for notifying/triggering their external Dataverse/non-Dataverse systems when actions are performed on Business Central, so their external systems can react/perform other actions in response.  On Dataverse, they can use Power Automate to subscribe to Business Central for its business events and react on other apps in its ecosystem, such as Dynamics 365 Sales/Customer Service and others built using Power Apps.  They can also react on non-Dataverse systems, such as 3rd party fulfillment/warehouse management/e-invoicing services.
+We've introduced the new feature of business events to preview in *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).  It provides our partners/customers a mechanism for notifying/triggering their external Dataverse/non-Dataverse systems when actions are performed on Business Central, so their external systems can react/perform other actions in response.  On Dataverse, they can use Power Automate to subscribe to Business Central for its business events and react on other apps in its ecosystem, such as Dynamics 365 Sales/Customer Service and others built using Power Apps.  They can also react on non-Dataverse systems, such as 3rd party warehouse management/fulfillment/e-invoicing services.
 
 ![Screenshot](../../../images/introducing-business-events.png)
 
@@ -14,8 +14,8 @@ This article highlights the new feature of business events, the prerequisites an
 ## Prerequisites and step-by-step instructions
 To preview the new feature of business events on Business Central, you can/should:
 1. Create/upgrade a Business Central environment with *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).
-1. Fill out our survey: https://forms.office.com/r/GkvB6pritG.  Let us know which sample/custom business events you'll try/build in private preview, which additional business events we should add for public preview, in which scenarios do you want to use these business events, your *Azure Active Directory tenant ID + Business Central environment name* for us to enable for private preview, and your email contact for us to follow up.
-1. Explore our GitHub repository: https://github.com/microsoft/d365bcdv, which is being prepared as a one-stop-shop for Business Central & Dataverse integration, and collect source files for building an extension that implements our *Dynamics 365 Business Central* catalog of sample business events.
+1. Fill out [our survey](https://forms.office.com/r/GkvB6pritG).  Let us know which sample/custom business events you'll try/build in private preview, which additional business events we should add for public preview, in which scenarios do you want to use these business events, your *Azure Active Directory tenant ID + Business Central environment name* for us to enable for private preview, and your email contact for us to follow up.
+1. Explore [our GitHub repo](https://github.com/microsoft/d365bcdv), which is being prepared as a one-stop-shop for Business Central & Dataverse integration, and collect source files for building an extension that implements our *Dynamics 365 Business Central* catalog of sample business events.
 1. Build and install the extension on your Business Central environment that we've enabled for private preview.
 1. On Business Central app, use the assisted setup to connect your Business Central environment to a Dataverse environment, on which you want to submit subscriptions and receive notifications of business events.  This will guide you to install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables business event subscriptions/notifications on your Dataverse environment.  Make sure that you install the latest version that supports business events (**1.023093.3 or higher**).
 1. On Power Apps maker portal, find and edit the **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with sample business events on your Dataverse environment.
@@ -44,11 +44,11 @@ You can easily build and install an extension that implements the following samp
 
 To build and install an extension that implements those sample business events for private preview, follow these steps:
 1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this private preview folder.
-1. Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
+1. Build an extension by adding those files to your AL project in Visual Studio Code, see [Developing in AL](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview).
 
    ![Screenshot](../../../images/adding-files-to-project.png)
    
-1. Install the extension on your Business Central environment that we've enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
+1. Install the extension on your Business Central environment that we've enabled for private preview, see [Installing Extensions in Business Central](https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall).
 
 ## Connect Business Central to Dataverse 
 To connect your Business Central environment to a Dataverse environment, on which you want to submit subscriptions and receive notifications of business events, follow these steps:
@@ -88,8 +88,8 @@ To build and install an extension that implements custom business events, follow
 1.	Add the optional *RequiredPermissions* attribute to enforce additional permissions for users to subscribe.
 1.	Add the required parameters to define the business event payload.
 1.	Identify a specific AL event to subscribe and invoke the custom business event procedure w/ appropriate parameters when it occurs.
-1.	Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
-1.	Install the extension on your Business Central environment that we've enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
+1.	Build an extension by adding those files to your AL project in Visual Studio Code, see [Developing in AL](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview).
+1.	Install the extension on your Business Central environment that we've enabled for private preview, see [Installing Extensions in Business Central](https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall).
 1. Use the **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with custom business events on your Dataverse environment (see above).
 
 ```al
