@@ -170,3 +170,16 @@ Any authenticated Business Central user can query Business Central catalog for b
 ### Submit subscriptions of business events
 To submit business event subscriptions w/ your own notification URL, you can send requests to the *externaleventsubscriptions* endpoint:
 
+```yaml
+Request: POST api/microsoft/runtime/v1.0/externaleventsubscriptions
+{
+   "companyName": "CRONUS USA, Inc.",
+   "eventName": "salesorderposted",
+   "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+   "notificationUrl": "https://webhook.site/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+   "clientState": "" (optional)
+}
+
+Response: Empty w/ status code 201 Created
+```
+
