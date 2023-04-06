@@ -16,9 +16,9 @@ This article highlights the new feature of business events, the prerequisites an
 ## Prerequisites and step-by-step instructions
 To preview the new feature of business events on Business Central, you can/should:
 1. Create/upgrade a Business Central environment with *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).
-1. Fill out our survey: https://forms.office.com/r/GkvB6pritG.  Let us know which sample/custom business events you’ll try/build in private preview, which additional business events we should add for public preview, in which scenarios do you want to use these business events, your *Azure Active Directory tenant ID + Business Central environment name* for us to enable for private preview, and your email contact for us to follow up.
+1. Fill out our survey: https://forms.office.com/r/GkvB6pritG.  Let us know which sample/custom business events you'll try/build in private preview, which additional business events we should add for public preview, in which scenarios do you want to use these business events, your *Azure Active Directory tenant ID + Business Central environment name* for us to enable for private preview, and your email contact for us to follow up.
 1. Explore our GitHub repository: https://github.com/microsoft/d365bcdv, which is being prepared as a one-stop-shop for Business Central & Dataverse integration, and collect source files for building an extension that implements our *Dynamics 365 Business Central* catalog of sample business events.
-1. Build and install the extension on your Business Central environment that we’ve enabled for private preview.
+1. Build and install the extension on your Business Central environment that we've enabled for private preview.
 1. On Business Central app, use the assisted setup to connect your Business Central environment to a Dataverse environment, on which you want to submit subscriptions and receive notifications of business events.  This will guide you to install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables business event subscriptions/notifications on your Dataverse environment.  Make sure that you install the latest version that supports business events (**1.023093.3 or higher**).
 1. On Power Apps maker portal, find and edit the **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with sample business events on your Dataverse environment.
 1. On Power Apps maker portal, create Power Automate flows with the **When an action is performed** trigger that query Business Central catalog, submit subscriptions, and receive notifications of sample business events on your Dataverse environment.
@@ -50,7 +50,7 @@ To build and install an extension that implements those sample business events f
 
    ![Screenshot](../../../images/adding-files-to-project.png)
    
-1. Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
+1. Install the extension on your Business Central environment that we've enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
 
 ## Connect Business Central to Dataverse 
 To connect your Business Central environment to a Dataverse environment, on which you want to submit subscriptions and receive notifications of business events, follow these steps:
@@ -91,7 +91,7 @@ To build and install an extension that implements custom business events, follow
 1.	Add the required parameters to define the business event payload.
 1.	Identify a specific AL event to subscribe and invoke the custom business event procedure w/ appropriate parameters when it occurs.
 1.	Build an extension by adding those files to your AL project in Visual Studio Code, see https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview.
-1.	Install the extension on your Business Central environment that we’ve enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
+1.	Install the extension on your Business Central environment that we've enabled for private preview, see https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall.
 1. Use the **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with custom business events on your Dataverse environment (see above).
 
 ```al
@@ -193,7 +193,7 @@ For each business event, your request must contain the following data:
 - *eventName*: The name of this business event
 - *appId*: The GUID of Business Central extension that implements this business event
 - *notificationUrl*: The URL to post notifications of this business event 
-- *clientState*: The optional string associated with this business event subscription that can be used to validate any caller’s posting to the notification URL
+- *clientState*: The optional string associated with this business event subscription that can be used to validate any caller's posting to the notification URL
 
 Only Business Central users who have been assigned the *Ext. Events – Subscr* permissions set can subscribe to specific companies for their business events.  Subscribers must have READ access to the *ExternalBusinessEventDefinition* table in subscribed companies.  Additionally, they must have relevant access in the subscribed companies as defined by the optional *RequiredPermissions* attribute.
 
@@ -225,13 +225,13 @@ This request will contain the following data:
 - *eventName*: The name of this business event
 - *payload*: The payload of this business event with parameter names and types that match their definitions
 - *appId*: The GUID of Business Central extension that implements this business event
-- *clientState*: The optional string associated with this business event subscription that can be used to validate any caller’s posting to the notification URL
+- *clientState*: The optional string associated with this business event subscription that can be used to validate any caller's posting to the notification URL
 
 Subscribers must still have READ access to the *ExternalBusinessEventDefinition* table in subscribed companies.  Additionally, they must still have relevant access in the subscribed companies as defined by the optional *RequiredPermissions* attribute.
 
 ## Current limitations and future improvements
 These are the current limitations for business events on Business Central that will be removed/improved in the near future:
 
-1.	Business Central’s *companyId* property isn’t included when submitting subscriptions and receiving notifications of business events for now.
-1.	When creating Power Automate flows with the **When an action is performed** trigger, you can’t select specific companies to subscribe for their business events, so business event subscriptions are submitted for all companies accessible to you for now.
-1. Translation and versioning for business events aren’t supported for now.
+1.	Business Central's *companyId* property isn't included when submitting subscriptions and receiving notifications of business events for now.
+1.	When creating Power Automate flows with the **When an action is performed** trigger, you can't select specific companies to subscribe for their business events, so business event subscriptions are submitted for all companies accessible to you for now.
+1. Translation and versioning for business events aren't supported for now.
