@@ -183,3 +183,43 @@ Request: POST api/microsoft/runtime/v1.0/externaleventsubscriptions
 Response: Empty w/ status code 201 Created
 ```
 
+For each business event, your request must contain the following data:
+- *companyName*: The name of company to subscribe for this business event
+- *eventName*: The name of this business event
+- *appId*: The GUID of Business Central extension that implements this business event
+- *notificationUrl*: The URL to post notifications of this business event 
+- *clientState*: The optional string associated with this business event subscription that can be used to validate any caller’s posting to the notification URL
+
+Only Business Central users who have been assigned the *Ext. Events – Subscr* permissions set can subscribe to specific companies for their business events.  Subscribers must have READ access to the *ExternalBusinessEventDefinition* table in subscribed companies.  Additionally, they must have relevant access in the subscribed companies as defined by the optional *RequiredPermissions* attribute.
+
+### Receive notifications of business events
+When a business event occurs and a subscription exists for it, Business Central will send a request to the relevant notification URL:
+
+```yaml
+Request: POST https://webhook.site/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+{
+   "initiatingUserAADObjectId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+   "timestamp": "2023-02-20T10:27:35.8770000Z",
+   "companyName": "CRONUS USA, Inc.",
+   "eventName": "salesorderposted",
+   "payload": 
+   {
+     "salesOrderId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+     "customerName": "Adatum Corporation",
+     "ordernumber": "S-ORD101005"
+   },
+   "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+   "clientState": ""
+}
+```
+
+This request must contain the following data:
+- *initiatingUserAADObjectId*: The Azure Active Directory object ID of user who initiated this business event
+- *timestamp*: The timestamp when this business event occurred (UTC)
+- *companyName*: The name of company where this business event occurred
+- *eventName*: The name of this business event
+- *payload*: The payload of this business event with parameter names and types that match their definitions
+- *appId*: The GUID of Business Central extension that implements this business event
+- *clientState*: The optional string associated with this business event subscription that can be used to validate any caller’s posting to the notification URL
+
+Subscribers must still have READ access to the *ExternalBusinessEventDefinition* table in subscribed companies.  Additionally, they must still have relevant access in the subscribed companies as defined by the optional *RequiredPermissions* attribute.
