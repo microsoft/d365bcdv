@@ -1,11 +1,9 @@
 # Business Events on Business Central (Preview)
 
 ## Introducing business events
-Integrating w/ Dataverse enables Business Central to interact w/ other apps in its ecosystem.  There are four types of *complementary* interactions: Data Sync, virtual tables, data change (**C**reated/**U**pdated/**D**eleted) events, and business events.
+Integrating w/ Dataverse enables Business Central to interact w/ other apps in its ecosystem, see [Review of Business Central & Dataverse integration](https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf).  There are four types of *complementary* interactions: Data Sync, virtual tables, data change (**C**reated/**U**pdated/**D**eleted) events, and business events.
 
 ![Screenshot](../../../images/four-complementary-interactions.png)
-
-To review Business Central & Dataverse integration, see https://github.com/microsoft/d365bcdv/blob/main/Review%20of%20Business%20Central%20and%20Dataverse%20integration.pdf
 
 We've introduced the new feature of business events to preview in *Dynamics 365 Business Central 2023 Wave 1 Release* (**22.0**).  It provides our partners/customers a mechanism for notifying/triggering their external Dataverse/non-Dataverse systems when actions are performed on Business Central, so their external systems can react/perform other actions in response.  On Dataverse, they can use Power Automate to subscribe to Business Central for its business events and react on other apps in its ecosystem, such as Dynamics 365 Sales/Customer Service and others built using Power Apps.  They can also react on non-Dataverse systems, such as 3rd party fulfillment/warehouse management/e-invoicing services.
 
