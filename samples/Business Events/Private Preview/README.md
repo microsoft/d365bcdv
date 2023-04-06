@@ -223,7 +223,7 @@ This request will contain the following data:
 - *timestamp*: The timestamp when this business event occurred (UTC)
 - *companyName*: The name of company where this business event occurred
 - *eventName*: The name of this business event
-- *payload*: The payload of this business event with parameter names and types that match their definitions
+- *payload*: The payload of this business event with parameter names and values that match their definitions
 - *appId*: The GUID of Business Central extension that implements this business event
 - *clientState*: The optional string associated with this business event subscription that can be used to validate any caller's posting to the notification URL
 
