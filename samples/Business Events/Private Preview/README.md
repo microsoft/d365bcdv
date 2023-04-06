@@ -108,7 +108,7 @@ codeunit 50102 MyCodeunit 
    begin
       SalesOrderPosted(SalesHeader.SystemId, SalesHeader."Sell-to Customer Name", SalesHeader."No."); 
    end;
-    
+
    [ExternalBusinessEvent('salesorderposted', 'Sales order posted', 'Triggered when sales order has been posted', EventCategory::"Sales")]
    [RequiredPermissions(PermissionObjectType::TableData, Database::"Sales Header", 'R')] // optional
    procedure SalesOrderPosted(salesOrderId: Guid; customerName: Text; orderNumber: Text)
@@ -142,3 +142,31 @@ Response: "value": [{
    "appPublisher": "Default publisher"
 }]
 ```
+
+For each business event, the response to your request will contain the following data:
+- *category*: The enum value of category for this business event
+- *name*: The name of this business event
+- *displayName*: The display name of this business event
+- *description*: The description of this business event
+- *payload*: The serialized text in JSON format that defines the payload parameters for this business event – Each payload parameter is defined by an array of objects in JSON format, for example:
+  ```yaml
+  {
+     "Index": 0,
+     "Name": "salesOrderId",
+     "Type": "Guid"
+  }
+  ```
+  The objects that define each payload parameter are:
+  - *Index*: The index counter for this payload parameter 
+  - *Name*: The name of this payload parameter
+  - *Type*: The type of this payload parameter – We use Business Central parameter types that allow only the following values: *Byte*, *Char*, *Guid*, *Text*, *Text[length]*, *String*, *Enum*, *Code*, *Boolean*, *Decimal*, *Integer*, *BigInteger*, *Date*, *Time*, *DateTime*, *Option*, *RecordId*, *ObjectType*
+- *appId*: The GUID of Business Central extension that implements this business event
+- *appName*: The name of Business Central extension that implements this business event
+- *appVersion*: The version of Business Central extension that implements this business event
+- *appPublisher*: The publisher of Business Central extension that implements this business event
+
+Any authenticated Business Central user can query Business Central catalog for business event definitions.
+
+### Submit subscriptions of business events
+To submit business event subscriptions w/ your own notification URL, you can send requests to the *externaleventsubscriptions* endpoint:
+
