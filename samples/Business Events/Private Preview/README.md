@@ -119,12 +119,13 @@ codeunit 50102 MyCodeunit 
 
 ## Query Business Central catalog, submit subscriptions, and receive notifications of business events on non-Dataverse systems
 Business Central exposes specific APIs for business events that can be used to:
-- Query business event definitions
-- Add/remove business event subscriptions w/ your own webhook/notification URL
+- Query Business Central catalog for business event definitions
+- Submit business event subscriptions w/ your own notification URL
 
-The *Business Central Virtual Table (Preview)* plugin uses the same APIs to query Business Central catalog and manage subscriptions of business events for Power Automate flows.
+The *Business Central Virtual Table (Preview)* plugin uses the same APIs to query Business Central catalog and submit subscriptions of business events for Power Automate flows.
 
-To query business event definitions, you can use the *externalbusinessdefinitions* endpoint:
+### Query Business Central catalog of business events
+To query Business Central catalog for business event definitions, you can send a request to the *externalbusinessdefinitions* endpoint:
 
 ```yaml
 Request: GET api/microsoft/runtime/v1.0/externalbusinesseventdefinitions
