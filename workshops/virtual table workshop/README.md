@@ -5,3 +5,6 @@ Integrating w/ Dataverse enables Business Central to interact w/ other apps in i
 
 ![Screenshot](../../images/four-complementary-interactions.png)
 
+This workshop focuses on those interactions enabled by our virtual table plugin that’s installed on Dataverse: virtual tables, data (CUD) events, and business events.
+
+![Screenshot](../../images/virtual-table-workshop-intro.png)
