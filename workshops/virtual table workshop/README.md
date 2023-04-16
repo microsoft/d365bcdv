@@ -23,15 +23,15 @@ To reserve your user account, enter your name next to one of the accounts that a
 
 Use your reserved user account, preferably in a dedicated browser profile/incognito browser mode, to access the [base app on your Business Central environment](https://businesscentral.dynamics.com/) & [Power Apps maker portal on your Dataverse environment](https://make.powerapps.com/), so you can perform the following exercises:
 
-- [Create model-driven Power Apps w/ virtual tables](#virtual)
-  - Customize model-driven Power Apps w/ custom views
-  - Customize model-driven Power Apps w/ custom forms
-  - Customize model-driven Power Apps w/ bound actions
-- Create model-driven Power Apps w/ synthetic relations between native & virtual tables
-- Create Power Automate flows w/ data (CUD) event trigger for virtual table
-- Create Power Automate flows w/ business event trigger
+- [Create model-driven Power Apps w/ virtual tables](#model)
+  - [Customize model-driven Power Apps w/ custom views](#view)
+  - [Customize model-driven Power Apps w/ custom forms](#form)
+  - [Customize model-driven Power Apps w/ bound actions](#action)
+- [Create model-driven Power Apps w/ synthetic relations between native & virtual tables](#synthetic)
+- [Create Power Automate flows w/ data (CUD) event trigger for virtual table](#data)
+- [Create Power Automate flows w/ business event trigger](#business)
 
-## <a name="virtual"></a>Create model-driven Power Apps w/ virtual tables
+## <a name="model"></a>Create model-driven Power Apps w/ virtual tables
 In this exercise, you’ll learn to create model-driven Power Apps that can view, create, and modify sales orders in the virtual *Sales Order* table.  You’ll also learn to customize them w/ custom views/forms, Editable Grid control, and bound actions.  To perform this exercise, follow these steps:
 1.	On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Model-driven** item.
 
@@ -48,7 +48,7 @@ In this exercise, you’ll learn to create model-driven Power Apps that can view
  
 5.	Select the **Publish** button.
 
-### Customize model-driven Power Apps w/ custom views
+### <a name="view"></a>Customize model-driven Power Apps w/ custom views
 To customize model-driven Power Apps w/ custom views, follow these steps:
 1.	On Power Apps maker portal, select the **Tables** section and search for the **Sales Order** table under the **All** tab to select.
 
@@ -66,7 +66,7 @@ To customize model-driven Power Apps w/ custom views, follow these steps:
 
    ![Screenshot](../../images/change-all-sales-orders-view.png)
 
-### Customize model-driven Power Apps w/ custom forms
+### <a name="form"></a>Customize model-driven Power Apps w/ custom forms
 To customize model-driven Power Apps w/ custom forms, follow these steps:
 1.	On Power Apps maker portal, select the **Tables** section and search for the **Sales Order** table under the **All** tab to select.
 
@@ -98,7 +98,7 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
 
     ![Screenshot](../../images/sales-order-form-with-editable-lines-subgrid.png)
 
-### Customize model-driven Power Apps w/ bound actions
+### <a name="action"></a>Customize model-driven Power Apps w/ bound actions
 To customize model-driven Power Apps w/ bound actions, follow these steps:
 1.	On Power Apps maker portal, select the **Apps** section and edit your *Sales Order App YourAlias* app.
 2.	Select the *…* button next to **Sales Order** dropdown menu and **Edit command bar** item.
@@ -122,7 +122,7 @@ To customize model-driven Power Apps w/ bound actions, follow these steps:
 
    ![Screenshot](../../images/sales-order-to-ship-and-invoice.png)
 
-## Create model-driven Power Apps w/ synthetic relations between native & virtual tables
+## <a name="synthetic"></a>Create model-driven Power Apps w/ synthetic relations between native & virtual tables
 For this exercise, we’ve used Data Sync to replicate Business Central customers as accounts in the native *Account* table.  We’ve also created a synthetic one-to-many relation between that table and the virtual *Sales Order* table, such that the relevant sales orders can appear as a subgrid in the form page of any selected account.
 
 The synthetic relation has been created following [our table modeling article](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/powerplatform/powerplat-entity-modeling#virtual-tabletonative-table-relationship).  To view this relation, follow these steps:
@@ -157,7 +157,7 @@ To perform this exercise, follow these steps:
 
     ![Screenshot](../../images/account-form-with-sales-orders-subgrid.png)
 
-## Create Power Automate flows w/ data (CUD) event trigger for virtual table
+## <a name="data"></a>Create Power Automate flows w/ data (CUD) event trigger for virtual table
 In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) event trigger for virtual table that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
 1.	On Power Apps maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
 
@@ -188,7 +188,7 @@ In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) ev
 
    ![Screenshot](../../images/get-row-by-id-from-customer-cud-event-payload.png)
 
-## Create Power Automate flows w/ business event trigger
+## <a name="business"></a>Create Power Automate flows w/ business event trigger
 In this exercise, you’ll learn to create Power Automate flows w/ business event trigger that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
 1.	On Power Apps maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
 
