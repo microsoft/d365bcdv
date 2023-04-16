@@ -114,3 +114,38 @@ To customize model-driven Power Apps w/ bound actions, follow these steps:
 
    ![Screenshot](../../images/sales-order-to-ship-and-invoice.png)
 
+## Create model-driven Power Apps w/ synthetic relations between native & virtual tables
+For this exercise, we’ve used Data Sync to replicate Business Central customers as accounts in the native *Account* table.  We’ve also created a synthetic one-to-many relation between that table and the virtual *Sales Order* table, such that the relevant sales orders can appear as a subgrid in the form page of any selected account.
+
+The synthetic relation has been created following [our table modeling article](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/powerplatform/powerplat-entity-modeling#virtual-tabletonative-table-relationship).  To view this relation, follow these steps:
+1.	On Power Apps maker portal, select the **Tables** section and search for the **Business Central Table Relation** table under the **All** tab to select.
+2.	Select the **Edit** button, *dyn365bc_account2salesorder* row, and **Edit row using form** button
+
+   ![Screenshot](../../images/business-central-table-relation.png)
+
+To perform this exercise, follow these steps:
+1.	On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Model-driven** item.
+
+   ![Screenshot](../../images/add-model-driven-app.png)
+
+2.	Enter your unique app name, such as *Account App YourAlias*, and select the **Create** button.
+3.	Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
+
+   ![Screenshot](../../images/add-dataverse-table-page.png)
+
+4.	Select the **Select existing table** radio button, search for the **Account** check box to check, and select the **Add** button.
+
+   ![Screenshot](../../images/add-account-table-view.png)
+
+5.	Select the **Account** dropdown menu, **Account forms** item, and **Edit form** button.
+6.	For the **Display Name** property, enter your unique form name, such as *Account YourAlias*, then select the **Component** button, **Grid** dropdown menu, **Subgrid** item, **Show related records** check box, **Sales Orders (accountid)** item, and **Done** button.
+
+   ![Screenshot](../../images/add-sales-orders-subgrid.png)
+
+7.	For the **Label** property, enter your descriptive subgrid name, such as *Sales orders*, and select the **Save and publish** button.
+8.	On Power Apps maker portal, select the **Apps** section and your *Account App YourAlias* app.
+9.	Select the **My Active Accounts** dropdown menu and **All Accounts** item.
+10. Select any account representing Business Central customer to be viewed in your edited form w/ its sales orders subgrid.
+
+    ![Screenshot](../../images/account-form-with-sales-orders-subgrid.png)
+
