@@ -1,6 +1,6 @@
 # Dynamics 365 Business Central & Dataverse integration
 
-This repo is being prepared as our one-stop-shop for Business Central & Dataverse integration that includes all types of app/system interactions, such as Data Sync, virtual tables, data change (**C**reated/**U**pdated/**D**eleted) events, and business events.
+This repo is being prepared as our one-stop-shop for Business Central & Dataverse integration that includes all types of app/system interactions, such as Data Sync that replicates data between Business Central & Dataverse, virtual tables on Dataverse via Business Central API for (**C**reate/**R**ead/**U**pdate/**D**elete) operations, data change (**CUD**) events, and business events.
 
 In here, our partners/customers can discuss existing features, preview new ones, try sample code, and submit their feedbacks/questions/issues/ideas, while we can follow up, prioritize, and take them into our roadmap.
 
