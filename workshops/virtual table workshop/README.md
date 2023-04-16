@@ -22,3 +22,20 @@ To avoid conflicts when performing exercises, each user account has a dedicated 
 To reserve your user account, enter your name next to one of the accounts that are still available on our reservation sheet and take note of the same password for all accounts.
 
 Use your reserved user account, preferably in a dedicated browser profile/incognito browser mode, to access the [base app on your Business Central environment](https://businesscentral.dynamics.com/) & [Power Apps maker portal on your Dataverse environment](https://make.powerapps.com/), so you can perform the following exercises.
+
+
+## Create model-driven Power Apps w/ virtual tables
+In this exercise, you’ll learn to create model-driven Power Apps that can view, create, and modify sales orders in the virtual *Sales Order* table.  You’ll also learn to customize them w/ custom views/forms, Editable Grid control, and bound actions.  To perform this exercise, follow these steps:
+1.	On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Model-driven** item.
+
+ 
+
+2.	Enter your unique app name, such as *Sales Order App <alias>*, and select the **Create** button.
+3.	Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
+
+ 
+
+4.	Select the **Select existing table** radio button, search for the **Sales Order** check box to check, and select the **Add** button.
+ 
+5.	Select the **Publish** button.
+
