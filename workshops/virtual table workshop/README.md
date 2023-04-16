@@ -180,3 +180,32 @@ In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) ev
 
    ![Screenshot](../../images/get-row-by-id-from-customer-cud-event-payload.png)
 
+## Create Power Automate flows w/ business event trigger
+In this exercise, you’ll learn to create Power Automate flows w/ business event trigger that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
+1.	On Power Apps maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
+
+   ![Screenshot](../../images/automated-cloud-flow.png)
+
+2.	Enter *Customer blocked event* as your flow name, search for the **When an action is performed** trigger to add, and select the **Create** button.
+
+   ![Screenshot](../../images/add-business-event-trigger.png)
+
+3.	Select **Dynamics 365 Business Central** for the **Catalog** property, **My Accounts Receivable Events** for the **Category** property, **(none)** for the **Table name** property, **Customer blocked** for the **Action name** property, and the **+ New step** button.
+
+   ![Screenshot](../../images/customer-blocked-event-trigger.png)
+
+4.	Search for the **Get a row by ID** operation to add, select **Customers** for the **Table name** property, and enter the **Row ID** field to see all parameters from the previous step.
+5.	Select the **ActionInputs CustomerId** parameter for **Row ID** property and **Save** button.
+
+   ![Screenshot](../../images/get-row-by-id-from-customer-blocked-event.png)
+
+6.	On Business Central app, block a customer.
+7.	On Power Apps maker portal, select the **Flows** section, your *Customer blocked event* flow, and the latest run in its **28-day run history**.
+
+   ![Screenshot](../../images/customer-blocked-event-run-history.png)
+
+8.	See the event payload and query result from the latest run of your *Customer blocked event* flow that match the properties of blocked customer.
+
+   ![Screenshot](../../images/customer-blocked-event-payload.png)
+
+   ![Screenshot](../../images/get-row-by-id-from-customer-blocked-event-payload.png)
