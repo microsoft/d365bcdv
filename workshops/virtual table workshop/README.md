@@ -58,3 +58,35 @@ To customize model-driven Power Apps w/ custom views, follow these steps:
 
    ![Screenshot](../../images/change-all-sales-orders-view.png)
 
+### Customize model-driven Power Apps w/ custom forms
+To customize model-driven Power Apps w/ custom forms, follow these steps:
+1.	On Power Apps maker portal, select the **Tables** section and search for the **Sales Order** table under the **All** tab to select.
+
+   ![Screenshot](../../images/search-for-sales-order-table.png)
+
+2.	Select the **Forms** section, **+ New form** dropdown menu, and **+ Main Form** item to open Power Apps form designer.
+3.	For the **Display Name** property, enter your unique form name, such as *Information YourAlias*, and select table columns to add as fields in your form.
+
+   ![Screenshot](../../images/add-sales-order-form.png)
+
+4.	Select the **Component** button, **Grid** dropdown menu, **Subgrid** item, **Show related records** check box, and **Done** button.
+
+   ![Screenshot](../../images/add-sales-order-lines-subgrid.png)
+
+5.	For the **Label** property, enter your descriptive subgrid name, such as *Lines*, and select the **Save and publish** button.
+6.	Select the **Form settings** button and **Form order** section, reorder the list of forms w/ your *Information YourAlias* form on top, and select the ** Save and publish** button.
+
+   ![Screenshot](../../images/open-sales-order-form-settings.png)
+
+7.	On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
+8.	Select any sales order to be viewed in your *Information YourAlias* form w/ its lines subgrid.
+9.	On Power Apps form designer, select your subgrid, **Components** dropdown menu, **+ Component** button, **Editable Grid** item, and **Done** button.
+
+   ![Screenshot](../../images/make-sales-order-lines-subgrid-editable.png)
+
+10.	Select the ** Save and publish** button.
+11.	On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
+12.	Select any sales order to be viewed in your *Information YourAlias* form w/ its editable lines subgrid.
+
+   ![Screenshot](../../images/sales-order-form-with-editable-lines-subgrid.png)
+
