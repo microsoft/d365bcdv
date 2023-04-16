@@ -84,9 +84,33 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
 
    ![Screenshot](../../images/make-sales-order-lines-subgrid-editable.png)
 
-10.	Select the ** Save and publish** button.
-11.	On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
-12.	Select any sales order to be viewed in your *Information YourAlias* form w/ its editable lines subgrid.
+10.Select the **Save and publish** button.
+11.On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
+12.Select any sales order to be viewed in your *Information YourAlias* form w/ its editable lines subgrid.
 
    ![Screenshot](../../images/sales-order-form-with-editable-lines-subgrid.png)
+
+### Customize model-driven Power Apps w/ bound actions
+To customize model-driven Power Apps w/ bound actions, follow these steps:
+1.	On Power Apps maker portal, select the **Apps** section and edit your *Sales Order App YourAlias* app.
+2.	Select the *…* button next to **Sales Order** dropdown menu and **Edit command bar** item.
+
+ 
+
+3.	Select the **Main form** radio button and **Edit** button.
+
+ 
+
+4.	Select the **+ New** dropdown menu and **Command** item.
+
+ 
+
+5.	Enter *Ship & Invoice* for the **Label** property, select **Use Icon** and **CreateInvoice** for the **Icon** property, select **Run Javascript** for the **Action** property, select *xxxxx_shipandinvoice* for the **Library** property, enter *InvokeAction* for the function name, and select the **Save and Publish** button.  We’ve created the library w/ that function by uploading the *shipandinvoice.js* file from this workshop folder.
+
+ 
+
+6.	On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
+7.	Select any sales order and the **Ship & Invoice** button to execute the bound action on that sales order.
+
+ 
 
