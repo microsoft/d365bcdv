@@ -74,7 +74,7 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
    ![Screenshot](../../images/add-sales-order-lines-subgrid.png)
 
 5.	For the **Label** property, enter your descriptive subgrid name, such as *Lines*, and select the **Save and publish** button.
-6.	Select the **Form settings** button and **Form order** section, reorder the list of forms w/ your *Information YourAlias* form on top, and select the ** Save and publish** button.
+6.	Select the **Form settings** button and **Form order** section, reorder the list of forms w/ your *Information YourAlias* form on top, and select the **Save and publish** button.
 
    ![Screenshot](../../images/open-sales-order-form-settings.png)
 
