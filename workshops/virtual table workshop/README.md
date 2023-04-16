@@ -160,7 +160,7 @@ In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) ev
    ![Screenshot](../../images/add-data-cud-event-trigger.png)
 
 3.	Select **Added or Modified or Deleted** for the **Change type** property, **Customers** for the **Table name** property, **Organization** for the **Scope** property, and **Show advanced options** to see more properties.
-4.	While all event subscriptions from Dataverse are done for all accessible companies in Business Central, data (CUD) event notifications can be filtered for just one company, so enter *dyn365bc_companylookup_code eq YourCompanyName* for the **Filter rows** property, and select the **+ New step** button.
+4.	While all event subscriptions from Dataverse are done for all accessible companies in Business Central, data (CUD) event notifications can be filtered for just one company, so enter *dyn365bc_companylookup_code eq 'YourCompanyName'* for the **Filter rows** property, and select the **+ New step** button.
 
    ![Screenshot](../../images/customer-cud-event-trigger-with-advanced-options.png)
 
