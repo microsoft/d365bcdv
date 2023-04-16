@@ -29,7 +29,7 @@ In this exercise, you’ll learn to create model-driven Power Apps that can view
 
    ![Screenshot](../../images/add-model-driven-app.png)
 
-2.	Enter your unique app name, such as *Sales Order App <alias>*, and select the **Create** button.
+2.	Enter your unique app name, such as *Sales Order App YourAlias*, and select the **Create** button.
 3.	Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
 
    ![Screenshot](../../images/add-dataverse-table-page.png)
