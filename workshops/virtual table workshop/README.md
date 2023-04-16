@@ -84,33 +84,33 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
 
    ![Screenshot](../../images/make-sales-order-lines-subgrid-editable.png)
 
-10.Select the **Save and publish** button.
-11.On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
-12.Select any sales order to be viewed in your *Information YourAlias* form w/ its editable lines subgrid.
+10. Select the **Save and publish** button.
+11. On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
+12. Select any sales order to be viewed in your *Information YourAlias* form w/ its editable lines subgrid.
 
-   ![Screenshot](../../images/sales-order-form-with-editable-lines-subgrid.png)
+    ![Screenshot](../../images/sales-order-form-with-editable-lines-subgrid.png)
 
 ### Customize model-driven Power Apps w/ bound actions
 To customize model-driven Power Apps w/ bound actions, follow these steps:
 1.	On Power Apps maker portal, select the **Apps** section and edit your *Sales Order App YourAlias* app.
 2.	Select the *…* button next to **Sales Order** dropdown menu and **Edit command bar** item.
 
- 
+   ![Screenshot](../../images/edit-command-bar.png)
 
 3.	Select the **Main form** radio button and **Edit** button.
 
+   ![Screenshot](../../images/edit-command-bar-for-main-form.png)
  
-
 4.	Select the **+ New** dropdown menu and **Command** item.
 
- 
+   ![Screenshot](../../images/add-new-command.png)
 
 5.	Enter *Ship & Invoice* for the **Label** property, select **Use Icon** and **CreateInvoice** for the **Icon** property, select **Run Javascript** for the **Action** property, select *xxxxx_shipandinvoice* for the **Library** property, enter *InvokeAction* for the function name, and select the **Save and Publish** button.  We’ve created the library w/ that function by uploading the *shipandinvoice.js* file from this workshop folder.
 
- 
+   ![Screenshot](../../images/add-ship-and-invoice-command.png)
 
 6.	On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
 7.	Select any sales order and the **Ship & Invoice** button to execute the bound action on that sales order.
 
- 
+   ![Screenshot](../../images/sales-order-to-ship-and-invoice.png)
 
