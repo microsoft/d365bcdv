@@ -234,3 +234,4 @@ These are the current limitations for business events on Business Central that w
 1.	Business Central's *companyId* property isn't included when submitting subscriptions and receiving notifications of business events for now.
 1.	When creating Power Automate flows with the **When an action is performed** trigger, you can't select specific companies to subscribe for their business events, so business event subscriptions are submitted for all companies accessible to you for now.
 1. Translation and versioning for business events aren't supported for now.
+1. Before you ask ; ), public preview is planned for one of Dynamics 365 Business Central minor releases (**22.1/22.2**).
