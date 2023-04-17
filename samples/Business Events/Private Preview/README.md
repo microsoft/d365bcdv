@@ -20,7 +20,7 @@ To preview the new feature of business events on Business Central, you can/shoul
 1. On Business Central app, use the assisted setup to connect your Business Central environment to a Dataverse environment, on which you want to submit subscriptions and receive notifications of business events.  This will guide you to install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables business event subscriptions/notifications on your Dataverse environment.  Make sure that you install the latest version that supports business events (**1.023093.3 or higher**).
 1. On Power Apps maker portal, find and edit the **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with sample business events on your Dataverse environment.
 1. On Power Apps maker portal, create Power Automate flows with the **When an action is performed** trigger that query Business Central catalog, submit subscriptions, and receive notifications of sample business events on your Dataverse environment.
-1. (OPTIONAL) Following our code, build and install your own extension that adds custom business events to Business Central catalog.  Use the same **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with custom business events on your Dataverse environment.
+1. (OPTIONAL) Following our code, build and install your own extension that adds custom business events to Business Central catalog.  Use the same **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with custom business events on your Dataverse environment. After every change on the Business event inside Business Central you have to refresh your Business Event inside Datavase.
 1. (OPTIONAL) Query Business Central catalog, submit subscriptions, and receive notifications of sample/custom business events on your non-Dataverse environment.
 1. Submit feedbacks/questions/issues from your preview to us. 
 
@@ -60,6 +60,7 @@ To connect your Business Central environment to a Dataverse environment, on whic
 1.	Review the relevant terms and conditions, flip the **I accept** switch on, and select the **Next** button again.
 1.	Specify your Dataverse environment URL, sign in as an administrator user, and select the **Next** button again.
 1.	Install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables business event subscriptions/notifications on your Dataverse environment, make sure that you install the latest version that supports business events (**1.023093.3 or higher**), and finally select the **Finish** button.
+1. Assign the Permission Set **EXT. EVENTS - SUBSCR** to the users to prevent permission errors.
 
    ![Screenshot](../../../images/virtual-table-plugin.png)
 
