@@ -18,6 +18,7 @@ To preview the new feature of business events on Business Central, you can/shoul
 1. Explore [our GitHub repo](https://github.com/microsoft/d365bcdv), which is being prepared as a one-stop-shop for Business Central & Dataverse integration, and collect source files for building an extension that implements our *Dynamics 365 Business Central* catalog of sample business events.
 1. Build and install the extension on your Business Central environment that we've enabled for private preview.
 1. On Business Central app, use the assisted setup to connect your Business Central environment to a Dataverse environment, on which you want to submit subscriptions and receive notifications of business events.  This will guide you to install the *Business Central Virtual Table (Preview)* plugin from AppSource that enables business event subscriptions/notifications on your Dataverse environment.  Make sure that you install the latest version that supports business events (**1.023093.3 or higher**).
+1. Assign the *Ext. Events – Subscr* permissions set to Business Central users who want to subscribe to specific companies for their business events.
 1. On Power Apps maker portal, find and edit the **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with sample business events on your Dataverse environment.
 1. On Power Apps maker portal, create Power Automate flows with the **When an action is performed** trigger that query Business Central catalog, submit subscriptions, and receive notifications of sample business events on your Dataverse environment.
 1. (OPTIONAL) Following our code, build and install your own extension that adds custom business events to Business Central catalog.  Use the same **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with custom business events on your Dataverse environment.  This should also be done if you make changes to your custom business events.
@@ -70,8 +71,6 @@ To refresh our business event catalog after installing your extension, follow th
 1.	Select the **Refresh Business Event Catalog** button on that form.
 
    ![Screenshot](../../../images/refresh-business-event-catalog.png)
-
-1. Assign the *Ext. Events – Subscr* permissions set to Business Central users who want to subscribe to specific companies for their business events.  
 
 ## Query Business Central catalog, submit subscriptions, and receive notifications of business events on Dataverse 
 To query Business Central catalog, submit subscriptions, and receive notifications of business events on your Dataverse environment, follow these steps:
