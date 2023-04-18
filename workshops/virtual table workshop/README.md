@@ -19,7 +19,7 @@ For this workshop preparation, we’ve done the following:
 
 To avoid conflicts when performing exercises, each user account has a dedicated company on its Business Central environment.  For example, the user *AdeleV@M365xXXXXXXXX.OnMicrosoft.com* has been assigned the *SUPER* permission set to access her dedicated *Cronus ADELEV* company.  To access the pre-generated/visible virtual tables, each user account has been assigned the *System Customizer* security role on its Dataverse environment.
 
-To reserve your user account, enter your name next to one of the accounts that are still available on [our reservation sheet](https://1drv.ms/x/s!Ag4kKioQJdg6gc07SAMpB080O_roqg?e=wL2QCk) and take note of the same password for all accounts.
+To reserve your user account, enter your name next to one of the accounts that are still available on our reservation sheet and take note of the same password for all accounts.
 
 Use your reserved user account, preferably in a dedicated browser profile/incognito browser mode, to access the [base app on your Business Central environment](https://businesscentral.dynamics.com/) & [Power Apps maker portal on your Dataverse environment](https://make.powerapps.com/), so you can perform the following exercises:
 
