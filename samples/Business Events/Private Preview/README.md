@@ -82,7 +82,7 @@ To query Business Central catalog, submit subscriptions, and receive notificatio
    ![Screenshot](../../../images/power-automate-flow.png)
 
 ## Build and install an extension for custom business events
-To build and install an extension that implements custom business events, follow these steps:
+To build and install an extension that implements custom business events, see our code in the published source files and follow these steps:
 1.	Identify/create relevant AL files to code your custom business events.
 1.	Identify existing categories for your custom business events or create new ones using the extensible enum.
 1.	Create a procedure with empty body for each custom business event.
@@ -91,7 +91,7 @@ To build and install an extension that implements custom business events, follow
 1.	Add the required parameters to define the business event payload.
 1.	Identify a specific AL event to subscribe and invoke the custom business event procedure w/ appropriate parameters when it occurs.
 1.	Build an extension by adding those files to your AL project in Visual Studio Code, see [Developing in AL](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview).
-1.	Install the extension on your Business Central environment that we've enabled for private preview, see [Installing Extensions in Business Central](https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall).
+1.	Install the extension on your Business Central environment, see [Installing Extensions in Business Central](https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall).
 1. Use the **Business Central Virtual Data Source Configuration** table to refresh Business Central catalog with custom business events on your Dataverse environment (see above).
 
 ```al
