@@ -179,6 +179,7 @@ To submit business event subscriptions w/ your own notification URL, you can sen
 Request: POST api/microsoft/runtime/v1.0/externaleventsubscriptions
 {
    "companyName": "CRONUS USA, Inc.",
+   "companyId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
    "eventName": "salesorderposted",
    "appId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
    "notificationUrl": "https://webhook.site/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
@@ -190,6 +191,7 @@ Response: Empty w/ status code 201 Created
 
 For each business event, your request must contain the following data:
 - *companyName*: The name of company to subscribe for this business event
+- *companyId*: The GUID of company to subscribe for this business event
 - *eventName*: The name of this business event
 - *appId*: The GUID of Business Central extension that implements this business event
 - *notificationUrl*: The URL to post notifications of this business event 
@@ -206,6 +208,7 @@ Request: POST https://webhook.site/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
    "initiatingUserAADObjectId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
    "timestamp": "2023-02-20T10:27:35.8770000Z",
    "companyName": "CRONUS USA, Inc.",
+   "companyId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
    "eventName": "salesorderposted",
    "payload": 
    {
@@ -222,6 +225,7 @@ This request will contain the following data:
 - *initiatingUserAADObjectId*: The Azure Active Directory object ID of user who initiated this business event
 - *timestamp*: The timestamp when this business event occurred (UTC)
 - *companyName*: The name of company where this business event occurred
+- *companyId*: The GUID of company where this business event occurred
 - *eventName*: The name of this business event
 - *payload*: The payload of this business event with parameter names and values that match their definitions
 - *appId*: The GUID of Business Central extension that implements this business event
@@ -232,7 +236,5 @@ Subscribers must still have READ access to the *ExternalBusinessEventDefinition*
 ## Current limitations and future improvements
 These are the current limitations for business events on Business Central that will be removed/improved in the near future:
 
-1.	Business Central's *companyId* property isn't included when submitting subscriptions and receiving notifications of business events for now.
 1.	When creating Power Automate flows with the **When an action is performed** trigger, you can't select specific companies to subscribe for their business events, so business event subscriptions are submitted for all companies accessible to you for now.
 1. Translation and versioning for business events aren't supported for now.
-1. Before you ask ; ), public preview is planned for one of Dynamics 365 Business Central minor releases (**22.1/22.2**).
