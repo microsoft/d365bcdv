@@ -24,7 +24,8 @@ To preview the new feature of business events on Business Central, you can/shoul
 1. (OPTIONAL) Fill out [our survey](https://forms.office.com/r/GkvB6pritG) to let us know which business events you'll try/build in preview, which additional business events we should add for general availability, in which scenarios do you want to use these business events, and your email contact for us to follow up. 
 
 ## Build and install an extension for sample business events
-You can easily build and install an extension that implements the following sample business events for private preview:
+
+If your Business Central environment is on **22.0/22.1**, you can easily build and install an extension that implements the following sample business events for preview:
 
 | **Category** | **Name** | **Description** |
 |--------------|----------|-----------------|
@@ -41,13 +42,15 @@ You can easily build and install an extension that implements the following samp
 | My Purchasing Events | Purchase order released | This business event is triggered when a purchase order is released to the internal warehouse/external logistics company, so they're ready to receive goods coming their way. This trigger occurs when the Release button is clicked on Purchase Order page in Business Central. |
 | My Sales Events | Sales order released | This business event is triggered when a sales order is released to the internal warehouse/external logistics company, so they're ready to pick and ship goods. This trigger occurs when the Release button is clicked on Sales Order page in Business Central. |
 
-To build and install an extension that implements those sample business events for private preview, follow these steps:
-1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this private preview folder.
+To build and install an extension that implements those sample business events for preview, follow these steps:
+1. Collect two AL files (*MyEventCategory.EnumExt.al* and *MyBusinessEvents.al*) from this preview folder.
 1. Build an extension by adding those files to your AL project in Visual Studio Code, see [Developing in AL](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/developer/devenv-dev-overview).
 
    ![Screenshot](../../../images/adding-files-to-project.png)
    
-1. Install the extension on your Business Central environment that we've enabled for private preview, see [Installing Extensions in Business Central](https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall).
+1. Install the extension on your Business Central environment, see [Installing Extensions in Business Central](https://learn.microsoft.com/dynamics365/business-central/ui-extensions-install-uninstall).
+
+If your Business Central environment is on **22.2 or higher**, our Business Central catalog already has more business events added/built-in.
 
 ## Connect Business Central to Dataverse 
 To connect your Business Central environment to a Dataverse environment, on which you want to submit subscriptions and receive notifications of business events, follow these steps:
