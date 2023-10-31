@@ -14,7 +14,7 @@ For this workshop preparation, we’ve done the following:
 - Provisioned a few pairs of Business Central & Dataverse environments
 - Run the assisted setup on Business Central app to connect the paired environments
 - Installed our virtual table plugin from AppSource on all Dataverse environments
-- Generated a few virtual tables (*Customer/Item/Sales Order/Sales Order Lines*) to make them visible on all Dataverse environments
+- Generated a few virtual tables (*Customer/Item/Sales Order/Sales Order Line/Sales Invoice/Sales Invoice Line/Sales Shipment/Sales Shipment Line*) to make them visible on all Dataverse environments
 - Created several user accounts to perform exercises on the paired environments that are accessible to them
 
 To avoid conflicts when performing exercises, each user account has a dedicated company on its Business Central environment.  For example, the user *AdeleV@M365xXXXXXXXX.OnMicrosoft.com* has been assigned the *SUPER* permission set to access her dedicated *Cronus ADELEV* company.  To access the pre-generated/visible virtual tables, each user account has been assigned the *System Customizer* security role on its Dataverse environment.
