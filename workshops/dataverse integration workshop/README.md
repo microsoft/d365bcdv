@@ -136,30 +136,30 @@ To perform this exercise, follow these steps:
 
 ## <a name="data"></a>Create Power Automate flows w/ data (CUD) event trigger for virtual table
 In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) event trigger for virtual table that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
-1.	On Power Apps maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
+1. On Power Apps/Automate maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
 
    ![Screenshot](../../images/automated-cloud-flow.png)
 
-2.	Enter *Data (CUD) event* as your flow name, search for the **When a row is added, modified or deleted** trigger to add, and select the **Create** button.
+1. Enter *Data (CUD) event* as your flow name, search for the **When a row is added, modified or deleted** trigger to add, and select the **Create** button.
 
    ![Screenshot](../../images/add-data-cud-event-trigger.png)
 
-3.	Select **Added or Modified or Deleted** for the **Change type** property, **Customers** for the **Table name** property, **Organization** for the **Scope** property, and **Show advanced options** to see more properties.
-4.	While all event subscriptions from Dataverse are done for all accessible companies in Business Central, data (CUD) event notifications can be filtered for just one company, so enter *dyn365bc_companylookup_code eq 'YourCompanyName'* for the **Filter rows** property, and select the **+ New step** button.
+1. Select **Added or Modified or Deleted** for the **Change type** property, **Customers** for the **Table name** property, **Organization** for the **Scope** property, and **Show advanced options** to see more properties.
+1. While all event subscriptions from Dataverse are done for all accessible companies in Business Central, data (CUD) event notifications can be filtered for just one company, so enter *dyn365bc_companylookup_code eq 'YourCompanyName'* for the **Filter rows** property, and select the **+ New step** button.
 
    ![Screenshot](../../images/customer-cud-event-trigger-with-advanced-options.png)
 
-5.	Search for the **Get a row by ID** operation to add, select **Customers** for the **Table name** property, and enter the **Row ID** field to see some parameters from the previous step.
-6.	Select the **See more** button to see all parameters, **Id** parameter for **Row ID** property, and **Save** button.
+1. Search for the **Get a row by ID** operation to add, select **Customers** for the **Table name** property, and enter the **Row ID** field to see some parameters from the previous step.
+1. Select the **See more** button to see all parameters, **Id** parameter for **Row ID** property, and **Save** button.
 
    ![Screenshot](../../images/get-row-by-id-from-customer-cud-event.png)
 
-7.	On Business Central app, create/update/delete a customer.
-8.	On Power Apps maker portal, select the **Flows** section, your *Data (CUD) event* flow, and the latest run in its **28-day run history**.
+1. On Business Central app, create/update/delete a customer.
+1. On Power Apps/Automate maker portal, select the **Flows** section, your *Data (CUD) event* flow, and the latest run in its **28-day run history**.
 
    ![Screenshot](../../images/customer-cud-event-run-history.png)
 
-9.	See the event payload and query result from the latest run of your *Data (CUD) event* flow that match the properties of created/updated/deleted customer.
+1. See the event payload and query result from the latest run of your *Data (CUD) event* flow that match the properties of created/updated/deleted customer.
 
    ![Screenshot](../../images/customer-cud-event-payload.png)
 
@@ -167,29 +167,29 @@ In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) ev
 
 ## <a name="business"></a>Create Power Automate flows w/ business event trigger
 In this exercise, you’ll learn to create Power Automate flows w/ business event trigger that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
-1.	On Power Apps maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
+1. On Power Apps/Automate maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
 
    ![Screenshot](../../images/automated-cloud-flow.png)
 
-2.	Enter *Customer blocked event* as your flow name, search for the **When an action is performed** trigger to add, and select the **Create** button.
+1. Enter *Customer blocked event* as your flow name, search for the **When an action is performed** trigger to add, and select the **Create** button.
 
    ![Screenshot](../../images/add-business-event-trigger.png)
 
-3.	Select **Dynamics 365 Business Central** for the **Catalog** property, **My Accounts Receivable Events** for the **Category** property, **(none)** for the **Table name** property, **Customer blocked** for the **Action name** property, and the **+ New step** button.
+1. Select **Dynamics 365 Business Central** for the **Catalog** property, **My Accounts Receivable Events** for the **Category** property, **(none)** for the **Table name** property, **Customer blocked** for the **Action name** property, and the **+ New step** button.
 
    ![Screenshot](../../images/customer-blocked-event-trigger.png)
 
-4.	Search for the **Get a row by ID** operation to add, select **Customers** for the **Table name** property, and enter the **Row ID** field to see all parameters from the previous step.
-5.	Select the **ActionInputs CustomerId** parameter for **Row ID** property and **Save** button.
+1. Search for the **Get a row by ID** operation to add, select **Customers** for the **Table name** property, and enter the **Row ID** field to see all parameters from the previous step.
+1. Select the **ActionInputs CustomerId** parameter for **Row ID** property and **Save** button.
 
    ![Screenshot](../../images/get-row-by-id-from-customer-blocked-event.png)
 
-6.	On Business Central app, block a customer.
-7.	On Power Apps maker portal, select the **Flows** section, your *Customer blocked event* flow, and the latest run in its **28-day run history**.
+1. On Business Central app, block a customer.
+1. On Power Apps/Automate maker portal, select the **Flows** section, your *Customer blocked event* flow, and the latest run in its **28-day run history**.
 
    ![Screenshot](../../images/customer-blocked-event-run-history.png)
 
-8.	See the event payload and query result from the latest run of your *Customer blocked event* flow that match the properties of blocked customer.
+1. See the event payload and query result from the latest run of your *Customer blocked event* flow that match the properties of blocked customer.
 
    ![Screenshot](../../images/customer-blocked-event-payload.png)
 
