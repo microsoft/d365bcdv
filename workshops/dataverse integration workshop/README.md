@@ -140,7 +140,7 @@ In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) ev
 
    ![Screenshot](../../images/automated-cloud-flow.png)
 
-1. Enter *Data (CUD) event* as your flow name, search for the **When a row is added, modified or deleted** trigger to add, and select the **Create** button.
+1. Enter *YourAlias Data (CUD) Event Flow* as your flow name, search for the **When a row is added, modified or deleted** trigger to add, and select the **Create** button.
 
    ![Screenshot](../../images/add-data-cud-event-trigger.png)
 
@@ -155,11 +155,11 @@ In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) ev
    ![Screenshot](../../images/get-row-by-id-from-customer-cud-event.png)
 
 1. On Business Central app, create/update/delete a customer.
-1. On Power Apps/Automate maker portal, select the **Flows** section, your *Data (CUD) event* flow, and the latest run in its **28-day run history**.
+1. On Power Apps/Automate maker portal, select the **Flows** section, *YourAlias Data (CUD) Event Flow*, and the latest run in its **28-day run history**.
 
    ![Screenshot](../../images/customer-cud-event-run-history.png)
 
-1. See the event payload and query result from the latest run of your *Data (CUD) event* flow that match the properties of created/updated/deleted customer.
+1. See the event payload and query result from the latest run of *YourAlias Data (CUD) Event Flow* that match the properties of created/updated/deleted customer.
 
    ![Screenshot](../../images/customer-cud-event-payload.png)
 
