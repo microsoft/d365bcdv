@@ -76,34 +76,34 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
 
    ![Screenshot](../../images/add-sales-order-form.png)
 
-1. Select the **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Sales Order Main Form" form as a Fallback form** check box, and **Save and publish** button.
+1. Select the *…* button next to **Form properties** button, **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Sales Order Main Form" form as a Fallback form** check box, and **Save and publish** button.
 1. On Power Apps maker portal, select the **Apps** section and edit *YourAlias Sales Order App*.
-1. Select **Sales Orders form** section and remove all other Main Forms in this app, except *YourAlias Sales Order Main Form*.
+1. Select the **Sales Orders form** section and remove all other Main Forms in this app, except *YourAlias Sales Order Main Form*.
 1. Select the **Save and publish** button.
 1. On Power Apps maker portal, select the **Apps** section and run *YourAlias Sales Order App*.
 1. Select any sales order to be viewed in *YourAlias Sales Order Main Form*.
 
 ### <a name="action"></a>Customize model-driven Power Apps w/ bound actions
 To customize model-driven Power Apps w/ bound actions, follow these steps:
-1.	On Power Apps maker portal, select the **Apps** section and edit your *Sales Order App YourAlias* app.
-2.	Select the *…* button next to **Sales Order** dropdown menu and **Edit command bar** item.
+1. On Power Apps maker portal, select the **Apps** section and edit your *YourAlias Sales Order App* app.
+1. Select the *…* button next to **Sales Order** dropdown menu and **Edit command bar** item.
 
    ![Screenshot](../../images/edit-command-bar.png)
 
-3.	Select the **Main form** radio button and **Edit** button.
+1. Select the **Main form** radio button and **Edit** button.
 
    ![Screenshot](../../images/edit-command-bar-for-main-form.png)
  
-4.	Select the **+ New** dropdown menu and **Command** item.
+1. Select the **+ New** dropdown menu and **Command** item.
 
    ![Screenshot](../../images/add-new-command.png)
 
-5.	Enter *Ship & Invoice* for the **Label** property, select **Use Icon** and **CreateInvoice** for the **Icon** property, select **Run Javascript** for the **Action** property, select *xxxxx_shipandinvoice* for the **Library** property, enter *InvokeAction* for the function name, and select the **Save and Publish** button.  We’ve created the library w/ that function by uploading the *shipandinvoice.js* file from this workshop folder.
+1. Enter *Ship & Invoice* for the **Label** property, select **Use Icon** and **CreateInvoice** for the **Icon** property, select **Run Javascript** for the **Action** property, select *xxxxx_shipandinvoice* for the **Library** property, enter *InvokeAction* for the function name, and select the **Save and Publish** button.  We’ve created the library w/ that function by uploading the *shipandinvoice.js* file from this workshop folder.
 
    ![Screenshot](../../images/add-ship-and-invoice-command.png)
 
-6.	On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
-7.	Select any sales order and the **Ship & Invoice** button to execute the bound action on that sales order.
+1. On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
+1. Select any sales order and the **Ship & Invoice** button to execute the bound action on that sales order.
 
    ![Screenshot](../../images/sales-order-to-ship-and-invoice.png)
 
