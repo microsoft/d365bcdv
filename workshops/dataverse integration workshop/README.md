@@ -34,20 +34,18 @@ Use your reserved user account, preferably in a dedicated browser profile/incogn
 
 ## <a name="model"></a>Create model-driven Power Apps w/ virtual tables
 In this exercise, you’ll learn to create model-driven Power Apps that can view, create, and modify sales orders in the virtual *Sales Order* table.  You’ll also learn to customize them w/ custom views/forms, Editable Grid control, and bound actions.  To perform this exercise, follow these steps:
-1.	On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Model-driven** item.
-
-   ![Screenshot](../../images/add-model-driven-app.png)
-
-2.	Enter your unique app name, such as *Sales Order App YourAlias*, and select the **Create** button.
-3.	Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
+1.	On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Start with a page design** item.
+1.	Select the **Filter** dropdown menu, **Model-driven app** item, and **Blank page with navigation** design.
+1.	Enter your unique app name, such as *YourAlias Sales Order App*, and select the **Create** button.
+1.	Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
 
    ![Screenshot](../../images/add-dataverse-table-page.png)
 
-4.	Select the **Select existing table** radio button, search for the **Sales Order** check box to check, and select the **Add** button.
+1.	Select the **Select existing table** radio button, search for the **Sales Order** check box to check, and select the **Add** button.
 
    ![Screenshot](../../images/add-sales-order-table-view.png)
  
-5.	Select the **Publish** button.
+1.	Select the **Publish** button.
 
 ### <a name="view"></a>Customize model-driven Power Apps w/ custom views
 To customize model-driven Power Apps w/ custom views, follow these steps:
