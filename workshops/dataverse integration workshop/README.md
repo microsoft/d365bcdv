@@ -33,7 +33,7 @@ Use your reserved user account, preferably in a dedicated browser profile/incogn
 - [Create Power Automate flows w/ business event trigger](#business)
 
 ## <a name="model"></a>Create model-driven Power Apps w/ virtual tables
-In this exercise, you’ll learn to create model-driven Power Apps that can view, create, and modify sales orders in the virtual *Sales Order* table.  You’ll also learn to customize them w/ custom views/forms, Editable Grid control, and bound actions.  To perform this exercise, follow these steps:
+In this exercise, you’ll learn to create model-driven Power Apps that can view, create, and modify sales orders in the virtual *Sales Order* table.  You’ll also learn to customize them w/ custom views/forms and bound actions.  To perform this exercise, follow these steps:
 1.	On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Start with a page design** item.
 1.	Select the **Filter** dropdown menu, **Model-driven app** item, and **Blank page with navigation** design.
 1.	Enter your unique app name, such as *YourAlias Sales Order App*, and select the **Create** button.
@@ -53,15 +53,15 @@ To customize model-driven Power Apps w/ custom views, follow these steps:
 
    ![Screenshot](../../images/search-for-sales-order-table.png)
  
-2.	Select the **Views** section and **+ New view** button.
-3.	Enter your unique view name, such as *YourAlias All Sales Orders*, and select the **Create** button to open Power Apps view designer.
-4.	Select the **+ View column** button to add more columns to your view.
+1.	Select the **Views** section and **+ New view** button.
+1.	Enter your unique view name, such as *YourAlias All Sales Orders*, and select the **Create** button to open Power Apps view designer.
+1.	Select the **+ View column** button to add more columns to your view.
 
    ![Screenshot](../../images/add-more-view-columns.png)
 
-5.	Select the **Save and publish** button.
-6.	On Power Apps maker portal, select the **Apps** section and your *YourAlias Sales Order App* app.
-7.	Select the **All Sales Orders** dropdown menu and your *YourAlias All Sales Orders* view or the **Manage and share views** item to change your default view.
+1.	Select the **Save and publish** button.
+1.	On Power Apps maker portal, select the **Apps** section and your *YourAlias Sales Order App* app.
+1.	Select the **All Sales Orders** dropdown menu and your *YourAlias All Sales Orders* view or the **Manage and share views** item to change your default view.
 
    ![Screenshot](../../images/change-all-sales-orders-view.png)
 
@@ -71,31 +71,18 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
 
    ![Screenshot](../../images/search-for-sales-order-table.png)
 
-2.	Select the **Forms** section, **+ New form** dropdown menu, and **+ Main Form** item to open Power Apps form designer.
-3.	For the **Display Name** property, enter your unique form name, such as *Information YourAlias*, and select table columns to add as fields in your form.
+1.	Select the **Forms** section, **+ New form** dropdown menu, and **+ Main Form** item to open Power Apps form designer.
+1.	For the **Display Name** property, enter your unique form name, such as *YourAlias Sales Order Main Form*, and select table columns to add as fields in your form.
 
    ![Screenshot](../../images/add-sales-order-form.png)
 
-4.	Select the **Component** button, **Grid** dropdown menu, **Subgrid** item, **Show related records** check box, and **Done** button.
-
-   ![Screenshot](../../images/add-sales-order-lines-subgrid.png)
-
-5.	For the **Label** property, enter your descriptive subgrid name, such as *Lines*, and select the **Save and publish** button.
-6.	Select the **Form settings** button and **Form order** section, reorder the list of forms w/ your *Information YourAlias* form on top, and select the **Save and publish** button.
-
-   ![Screenshot](../../images/open-sales-order-form-settings.png)
-
-7.	On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
-8.	Select any sales order to be viewed in your *Information YourAlias* form w/ its lines subgrid.
-9.	On Power Apps form designer, select your subgrid, **Components** dropdown menu, **+ Component** button, **Editable Grid** item, and **Done** button.
-
-   ![Screenshot](../../images/make-sales-order-lines-subgrid-editable.png)
-
+1.	Select the **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Sales Order Main Form" form as a Fallback form** check box, and **Save and publish** button.
+1.	Ensure that *YourAlias Sales Order Main Form* is the only Fallback form for other **Main Form** forms.
+1.	On Power Apps maker portal, select the **Apps** section and edit your *YourAlias Sales Order App* app.
+1.	Select **Sales Orders form** section and remove all other **Main Form** forms in this app, except *YourAlias Sales Order Main Form*.
 10. Select the **Save and publish** button.
 11. On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
-12. Select any sales order to be viewed in your *Information YourAlias* form w/ its editable lines subgrid.
-
-    ![Screenshot](../../images/sales-order-form-with-editable-lines-subgrid.png)
+12. Select any sales order to be viewed in your *YourAlias Sales Order Main Form* form.
 
 ### <a name="action"></a>Customize model-driven Power Apps w/ bound actions
 To customize model-driven Power Apps w/ bound actions, follow these steps:
