@@ -110,7 +110,7 @@ For this exercise, we’ve created a synthetic one-to-many relation between the 
 
 The synthetic relation has been created following [our table modeling article](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/powerplatform/powerplat-entity-modeling#virtual-tabletonative-table-relationship).  To view this relation, follow these steps:
 1. On Power Apps maker portal, select the **Tables** section and search for the **Business Central Table Relation** table under the **All** tab to select.
-1. Select the **Edit** button, *dyn365bc_account2salesorder* row, and **Edit row using form** button.
+1. Select the **Edit** button, *dyn365bc_contact2salesorder* row, and **Edit row using form** button.
 
 To perform this exercise, follow these steps:
 1. On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Start with a page design** item.
