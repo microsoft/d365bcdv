@@ -135,7 +135,7 @@ To perform this exercise, follow these steps:
 1. Select any contact to be viewed in *YourAlias Contact Main Form*.
 
 ## <a name="data"></a>Create Power Automate flows w/ data (CUD) event trigger for virtual table
-In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) event trigger for virtual table that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
+In this exercise, you’ll learn to create Power Automate flows w/ a data (CUD) event trigger for virtual table that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
 1. On Power Apps/Automate maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated cloud flow** item.
 
    ![Screenshot](../../images/automated-cloud-flow.png)
@@ -166,12 +166,12 @@ In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) ev
    ![Screenshot](../../images/get-row-by-id-from-customer-cud-event-payload.png)
 
 ## <a name="business"></a>Create Power Automate flows w/ business event trigger
-In this exercise, you’ll learn to create Power Automate flows w/ business event trigger that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
+In this exercise, you’ll learn to create Power Automate flows w/ a business event trigger that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
 1. On Power Apps/Automate maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated cloud flow** item.
 
    ![Screenshot](../../images/automated-cloud-flow.png)
 
-1. Enter *Customer blocked event* as your flow name, search for the **When an action is performed** trigger to add, and select the **Create** button.
+1. Enter *YourAlias Customer Blocked Event Flow* as your flow name, search for the **When an action is performed** trigger to add, and select the **Create** button.
 
    ![Screenshot](../../images/add-business-event-trigger.png)
 
@@ -185,11 +185,11 @@ In this exercise, you’ll learn to create Power Automate flows w/ business even
    ![Screenshot](../../images/get-row-by-id-from-customer-blocked-event.png)
 
 1. On Business Central app, block a customer.
-1. On Power Apps/Automate maker portal, select the **Flows** section, your *Customer blocked event* flow, and the latest run in its **28-day run history**.
+1. On Power Apps/Automate maker portal, select the **Flows** section, *YourAlias Customer Blocked Event Flow*, and the latest run in its **28-day run history**.
 
    ![Screenshot](../../images/customer-blocked-event-run-history.png)
 
-1. See the event payload and query result from the latest run of your *Customer blocked event* flow that match the properties of blocked customer.
+1. See the event payload and query result from the latest run of *YourAlias Customer Blocked Event Flow* that match the properties of blocked customer.
 
    ![Screenshot](../../images/customer-blocked-event-payload.png)
 
