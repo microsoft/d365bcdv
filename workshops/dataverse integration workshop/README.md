@@ -136,7 +136,7 @@ To perform this exercise, follow these steps:
 
 ## <a name="data"></a>Create Power Automate flows w/ data (CUD) event trigger for virtual table
 In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) event trigger for virtual table that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
-1. On Power Apps/Automate maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
+1. On Power Apps/Automate maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated cloud flow** item.
 
    ![Screenshot](../../images/automated-cloud-flow.png)
 
@@ -167,7 +167,7 @@ In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) ev
 
 ## <a name="business"></a>Create Power Automate flows w/ business event trigger
 In this exercise, you’ll learn to create Power Automate flows w/ business event trigger that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
-1. On Power Apps/Automate maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated code flow** item.
+1. On Power Apps/Automate maker portal, select the **Flows** section, **+ New flow** dropdown menu, and **Automated cloud flow** item.
 
    ![Screenshot](../../images/automated-cloud-flow.png)
 
