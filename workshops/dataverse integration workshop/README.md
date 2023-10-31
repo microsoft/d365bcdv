@@ -20,7 +20,7 @@ For this workshop preparation, we’ve done the following:
 
 To avoid conflicts when performing exercises, each user account has a dedicated company on its Business Central environment.  For example, the user *alans@XXXXXXXXX.OnMicrosoft.com* has been assigned the *SUPER* permission set to access his dedicated *Cronus ALANS* company.  To access the pre-generated/visible virtual tables, each user account has been assigned the *System Customizer* security role on its Dataverse environment.  Each contact account represents a customer of the dedicated company and can access a Power Pages site mapped to that company.  For example, the contact *alan* represents *Adatum Corporation*, which is a customer of *Cronus ALANS* company, and can access [the Power Pages site mapped to *Cronus ALANS*](https://site-duyrl.powerappsportals.com/).
 
-To reserve your user/contact accounts, enter your name in the "Reserved by" column, next to those accounts that are still available on our [reservation sheet](https://1drv.ms/x/s!XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX?e=XXXXXX) and take note of the same password for all accounts.
+To reserve your user/contact accounts, enter your name/alias in the "Reserved by" column, next to those accounts that are still available on our [reservation sheet](https://1drv.ms/x/s!XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX?e=XXXXXX) and take note of the same password for all accounts.
 
 Use your reserved user account, preferably in a dedicated browser profile/incognito browser mode, to access the [base app on your Business Central environment](https://businesscentral.dynamics.com/), [Power Apps maker portal on your Dataverse environment](https://make.powerapps.com/), [Power Automate maker portal on your Dataverse environment](https://make.powerautomate.com/), and the Power Pages site mapped to your dedicated company in our reservation sheet, so you can perform the following exercises:
 
@@ -34,52 +34,51 @@ Use your reserved user account, preferably in a dedicated browser profile/incogn
 
 ## <a name="model"></a>Create model-driven Power Apps w/ virtual tables
 In this exercise, you’ll learn to create model-driven Power Apps that can view, create, and modify sales orders in the virtual *Sales Order* table.  You’ll also learn to customize them w/ custom views/forms and bound actions.  To perform this exercise, follow these steps:
-1.	On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Start with a page design** item.
-1.	Select the **Filter** dropdown menu, **Model-driven app** item, and **Blank page with navigation** design.
-1.	Enter your unique app name, such as *YourAlias Sales Order App*, and select the **Create** button.
-1.	Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
+1. On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Start with a page design** item.
+1. Select the **Filter** dropdown menu, **Model-driven app** item, and **Blank page with navigation** design.
+1. Enter your unique app name, such as *YourAlias Sales Order App*, and select the **Create** button.
+1. Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
 
    ![Screenshot](../../images/add-dataverse-table-page.png)
 
-1.	Select the **Select existing table** radio button, search for the **Sales Order** check box to check, and select the **Add** button.
+1. Select the **Select existing table** radio button, search for the **Sales Order** check box to check, and select the **Add** button.
 
    ![Screenshot](../../images/add-sales-order-table-view.png)
  
-1.	Select the **Publish** button.
+1. Select the **Publish** button.
 
 ### <a name="view"></a>Customize model-driven Power Apps w/ custom views
 To customize model-driven Power Apps w/ custom views, follow these steps:
-1.	On Power Apps maker portal, select the **Tables** section and search for the **Sales Order** table under the **All** tab to select.
+1. On Power Apps maker portal, select the **Tables** section and search for the **Sales Order** table under the **All** tab to select.
 
-   ![Screenshot](../../images/search-for-sales-order-table.png)
+    ![Screenshot](../../images/search-for-sales-order-table.png)
  
-1.	Select the **Views** section and **+ New view** button.
-1.	Enter your unique view name, such as *YourAlias All Sales Orders View*, and select the **Create** button to open Power Apps view designer.
-1.	Select the **+ View column** button to add more columns to your view.
+1. Select the **Views** section and **+ New view** button.
+1. Enter your unique view name, such as *YourAlias All Sales Orders View*, and select the **Create** button to open Power Apps view designer.
+1. Select the **+ View column** button to add more columns to your view.
 
    ![Screenshot](../../images/add-more-view-columns.png)
 
-1.	Select the **Save and publish** button.
-1.	On Power Apps maker portal, select the **Apps** section and run *YourAlias Sales Order App*.
-1.	Select the **All Sales Orders** dropdown menu and *YourAlias All Sales Orders View* or the **Manage and share views** item to change your default view.
+1. Select the **Save and publish** button.
+1. On Power Apps maker portal, select the **Apps** section and run *YourAlias Sales Order App*.
+1. Select the **All Sales Orders** dropdown menu and *YourAlias All Sales Orders View* or the **Manage and share views** item to change your default view.
 
    ![Screenshot](../../images/change-all-sales-orders-view.png)
 
 ### <a name="form"></a>Customize model-driven Power Apps w/ custom forms
 To customize model-driven Power Apps w/ custom forms, follow these steps:
-1.	On Power Apps maker portal, select the **Tables** section and search for the **Sales Order** table under the **All** tab to select.
+1. On Power Apps maker portal, select the **Tables** section and search for the **Sales Order** table under the **All** tab to select.
 
    ![Screenshot](../../images/search-for-sales-order-table.png)
 
-1.	Select the **Forms** section, **+ New form** dropdown menu, and **+ Main Form** item to open Power Apps form designer.
-1.	For the **Display Name** property, enter your unique form name, such as *YourAlias Sales Order Main Form*, and select table columns to add as fields in your form.
+1. Select the **Forms** section, **+ New form** dropdown menu, and **+ Main Form** item to open Power Apps form designer.
+1. For the **Display Name** property, enter your unique form name, such as *YourAlias Sales Order Main Form*, and select table columns to add as fields in your form.
 
    ![Screenshot](../../images/add-sales-order-form.png)
 
-1.	Select the **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Sales Order Main Form" form as a Fallback form** check box, and **Save and publish** button.
-1.	Ensure that *YourAlias Sales Order Main Form* is the only Fallback form for other Main Forms.
-1.	On Power Apps maker portal, select the **Apps** section and edit *YourAlias Sales Order App*.
-1.	Select **Sales Orders form** section and remove all other Main Forms in this app, except *YourAlias Sales Order Main Form*.
+1. Select the **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Sales Order Main Form" form as a Fallback form** check box, and **Save and publish** button.
+1. On Power Apps maker portal, select the **Apps** section and edit *YourAlias Sales Order App*.
+1. Select **Sales Orders form** section and remove all other Main Forms in this app, except *YourAlias Sales Order Main Form*.
 1. Select the **Save and publish** button.
 1. On Power Apps maker portal, select the **Apps** section and run *YourAlias Sales Order App*.
 1. Select any sales order to be viewed in *YourAlias Sales Order Main Form*.
