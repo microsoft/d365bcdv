@@ -14,7 +14,7 @@ For this workshop preparation, we’ve done the following:
 - Provisioned a few pairs of Business Central & Dataverse environments
 - Run the assisted setup on Business Central app to connect the paired environments
 - Installed our virtual table plugin from AppSource on all Dataverse environments
-- Generated a few virtual tables (*Customer/Item/Sales Order/Sales Order Line/Sales Invoice/Sales Invoice Line/Sales Shipment/Sales Shipment Line*) to make them visible on all Dataverse environments
+- Generated a few virtual tables (*Customer/Item/Sales Order/Sales Order Line*) to make them visible on all Dataverse environments
 - Created several user accounts w/ their respective username/password to perform exercises on the paired environments that are accessible to them, for example creating/configuring model-driven Power Apps, Power Automate flows, and Power Pages sites
 - Created several contact accounts w/ their respective username/password to access Power Pages sites that have been created/configured by the above users
 
@@ -51,7 +51,7 @@ In this exercise, you’ll learn to create model-driven Power Apps that can view
 To customize model-driven Power Apps w/ custom views, follow these steps:
 1. On Power Apps maker portal, select the **Tables** section and search for the **Sales Order** table under the **All** tab to select.
 
-    ![Screenshot](../../images/search-for-sales-order-table.png)
+   ![Screenshot](../../images/search-for-sales-order-table.png)
  
 1. Select the **Views** section and **+ New view** button.
 1. Enter your unique view name, such as *YourAlias All Sales Orders View*, and select the **Create** button to open Power Apps view designer.
@@ -76,7 +76,8 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
 
    ![Screenshot](../../images/add-sales-order-form.png)
 
-1. Select the *…* button next to **Form properties** button, **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Sales Order Main Form" form as a Fallback form** check box, and **Save and publish** button.
+1. Select the *…* button next to **Form properties** button, **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Sales Order Main Form" form as a Fallback form** check box, **Form order** section, and move *YourAlias Sales Order Main Form* closer to the top.
+1. Select the **Save and publish** button.
 1. On Power Apps maker portal, select the **Apps** section and edit *YourAlias Sales Order App*.
 1. Select the **Sales Orders form** section and remove all other Main Forms in this app, except *YourAlias Sales Order Main Form*.
 1. Select the **Save and publish** button.
@@ -85,16 +86,13 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
 
 ### <a name="action"></a>Customize model-driven Power Apps w/ bound actions
 To customize model-driven Power Apps w/ bound actions, follow these steps:
-1. On Power Apps maker portal, select the **Apps** section and edit your *YourAlias Sales Order App* app.
-1. Select the *…* button next to **Sales Order** dropdown menu and **Edit command bar** item.
-
-   ![Screenshot](../../images/edit-command-bar.png)
-
+1. On Power Apps maker portal, select the **Apps** section and edit *YourAlias Sales Order App*.
+1. Select the *…* button next to **Sales Orders view** section and **Edit command bar** item.
 1. Select the **Main form** radio button and **Edit** button.
 
    ![Screenshot](../../images/edit-command-bar-for-main-form.png)
  
-1. Select the **+ New** dropdown menu and **Command** item.
+1. Select the **+ New** dropdown menu, **Command** item, **JavaScript** radio button, and **Continue** button.
 
    ![Screenshot](../../images/add-new-command.png)
 
@@ -102,45 +100,39 @@ To customize model-driven Power Apps w/ bound actions, follow these steps:
 
    ![Screenshot](../../images/add-ship-and-invoice-command.png)
 
-1. On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
+1. On Power Apps maker portal, select the **Apps** section and run *YourAlias Sales Order App*.
 1. Select any sales order and the **Ship & Invoice** button to execute the bound action on that sales order.
 
    ![Screenshot](../../images/sales-order-to-ship-and-invoice.png)
 
 ## <a name="synthetic"></a>Create model-driven Power Apps w/ synthetic relations between native & virtual tables
-For this exercise, we’ve used Data Sync to replicate Business Central customers as accounts in the native *Account* table.  We’ve also created a synthetic one-to-many relation between that table and the virtual *Sales Order* table, such that the relevant sales orders can appear as a subgrid in the form page of any selected account.
+For this exercise, we’ve created a synthetic one-to-many relation between the native *Contact* table and the virtual *Sales Order* table, such that the relevant sales orders can appear as a subgrid in the form page of any selected contact representing a customer of Business Central company.
 
 The synthetic relation has been created following [our table modeling article](https://learn.microsoft.com/dynamics365/business-central/dev-itpro/powerplatform/powerplat-entity-modeling#virtual-tabletonative-table-relationship).  To view this relation, follow these steps:
-1.	On Power Apps maker portal, select the **Tables** section and search for the **Business Central Table Relation** table under the **All** tab to select.
-2.	Select the **Edit** button, *dyn365bc_account2salesorder* row, and **Edit row using form** button
-
-   ![Screenshot](../../images/business-central-table-relation.png)
+1. On Power Apps maker portal, select the **Tables** section and search for the **Business Central Table Relation** table under the **All** tab to select.
+1. Select the **Edit** button, *dyn365bc_account2salesorder* row, and **Edit row using form** button.
 
 To perform this exercise, follow these steps:
-1.	On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Model-driven** item.
-
-   ![Screenshot](../../images/add-model-driven-app.png)
-
-2.	Enter your unique app name, such as *Account App YourAlias*, and select the **Create** button.
-3.	Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
+1. On Power Apps maker portal, select the **Apps** section, **+ New app** dropdown menu, and **Start with a page design** item.
+1. Select the **Filter** dropdown menu, **Model-driven app** item, and **Blank page with navigation** design.
+1. Enter your unique app name, such as *YourAlias Contact App*, and select the **Create** button.
+1. Select the **+ Add page** button, **Dataverse table** radio button, and **Next** button.
 
    ![Screenshot](../../images/add-dataverse-table-page.png)
 
-4.	Select the **Select existing table** radio button, search for the **Account** check box to check, and select the **Add** button.
-
-   ![Screenshot](../../images/add-account-table-view.png)
-
-5.	Select the **Account** dropdown menu, **Account forms** item, and **Edit form** button.
-6.	For the **Display Name** property, enter your unique form name, such as *Account YourAlias*, then select the **Component** button, **Grid** dropdown menu, **Subgrid** item, **Show related records** check box, **Sales Orders (accountid)** item, and **Done** button.
-
-   ![Screenshot](../../images/add-sales-orders-subgrid.png)
-
-7.	For the **Label** property, enter your descriptive subgrid name, such as *Sales orders*, and select the **Save and publish** button.
-8.	On Power Apps maker portal, select the **Apps** section and your *Account App YourAlias* app.
-9.	Select the **My Active Accounts** dropdown menu and **All Accounts** item.
-10. Select any account representing Business Central customer to be viewed in your edited form w/ its sales orders subgrid.
-
-    ![Screenshot](../../images/account-form-with-sales-orders-subgrid.png)
+1. Select the **Select existing table** radio button, search for the **Contact** check box to check, and select the **Add** button.
+1. Select the **Account** dropdown menu, **Account forms** item, and **Edit form** button.
+1. Select the **Contacts form** section, **+ New form** button, **Main Form** radio button, and **Create** button to open Power Apps form designer.
+1. For the **Display Name** property, enter your unique form name, such as *YourAlias Contact Main Form*, and select table columns to add as fields in your form.
+1. Select the **Component** button, **Grid** dropdown menu, **Subgrid** item, **Show related records** check box, **Sales Orders (contactid)** item, and **Done** button.
+1. For the **Label** property, enter your descriptive subgrid name, such as *Sales Orders*, and select the **Save and publish** button.
+1. Select the *…* button next to **Form properties** button, **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Contact Main Form" form as a Fallback form** check box, **Form order** section, and move *YourAlias Contact Main Form* closer to the top.
+1. Select the **Save and publish** button.
+1. On Power Apps maker portal, select the **Apps** section and edit *YourAlias Contact App*.
+1. Select the **Contacts form** section and remove all other Main Forms in this app, except *YourAlias Contact Main Form*.
+1. Select the **Save and publish** button.
+1. On Power Apps maker portal, select the **Apps** section and run *YourAlias Contact App*.
+1. Select any contact to be viewed in *YourAlias Contact Main Form*.
 
 ## <a name="data"></a>Create Power Automate flows w/ data (CUD) event trigger for virtual table
 In this exercise, you’ll learn to create Power Automate flows w/ data (CUD) event trigger for virtual table that’s offered by the standard Dataverse connector.  To perform this exercise, follow these steps:
