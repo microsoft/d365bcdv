@@ -54,14 +54,14 @@ To customize model-driven Power Apps w/ custom views, follow these steps:
    ![Screenshot](../../images/search-for-sales-order-table.png)
  
 2.	Select the **Views** section and **+ New view** button.
-3.	Enter your unique view name, such as *All Sales Orders YourAlias*, and select the **Create** button to open Power Apps view designer.
+3.	Enter your unique view name, such as *YourAlias All Sales Orders*, and select the **Create** button to open Power Apps view designer.
 4.	Select the **+ View column** button to add more columns to your view.
 
    ![Screenshot](../../images/add-more-view-columns.png)
 
-5.	Select the **Publish** button.
-6.	On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
-7.	Select the **All Sales Orders** dropdown menu and your *All Sales Orders YourAlias* view or the **Manage and share views** item to change your default view.
+5.	Select the **Save and publish** button.
+6.	On Power Apps maker portal, select the **Apps** section and your *YourAlias Sales Order App* app.
+7.	Select the **All Sales Orders** dropdown menu and your *YourAlias All Sales Orders* view or the **Manage and share views** item to change your default view.
 
    ![Screenshot](../../images/change-all-sales-orders-view.png)
 
