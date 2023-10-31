@@ -15,13 +15,14 @@ For this workshop preparation, we’ve done the following:
 - Run the assisted setup on Business Central app to connect the paired environments
 - Installed our virtual table plugin from AppSource on all Dataverse environments
 - Generated a few virtual tables (*Customer/Item/Sales Order/Sales Order Line/Sales Invoice/Sales Invoice Line/Sales Shipment/Sales Shipment Line*) to make them visible on all Dataverse environments
-- Created several user accounts to perform exercises on the paired environments that are accessible to them
+- Created several user accounts w/ their respective username/password to perform exercises on the paired environments that are accessible to them, for example creating/configuring model-driven Power Apps, Power Automate flows, and Power Pages sites
+- Created several contact accounts w/ their respective username/password to access Power Pages sites that have been created/configured by the above users
 
-To avoid conflicts when performing exercises, each user account has a dedicated company on its Business Central environment.  For example, the user *AdeleV@M365xXXXXXXXX.OnMicrosoft.com* has been assigned the *SUPER* permission set to access her dedicated *Cronus ADELEV* company.  To access the pre-generated/visible virtual tables, each user account has been assigned the *System Customizer* security role on its Dataverse environment.
+To avoid conflicts when performing exercises, each user account has a dedicated company on its Business Central environment.  For example, the user *alans@XXXXXXXXX.OnMicrosoft.com* has been assigned the *SUPER* permission set to access his dedicated *Cronus ALANS* company.  To access the pre-generated/visible virtual tables, each user account has been assigned the *System Customizer* security role on its Dataverse environment.  Each contact account represents a customer of the dedicated company and can access a Power Pages site mapped to that company.  For example, the contact *alan* represents *Adatum Corporation*, which is a customer of *Cronus ALANS* company, and can access [the Power Pages site mapped to *Cronus ALANS*](https://site-duyrl.powerappsportals.com/).
 
-To reserve your user account, enter your name next to one of the accounts that are still available on our reservation sheet and take note of the same password for all accounts.
+To reserve your user/contact accounts, enter your name in the "Reserved by" column, next to those accounts that are still available on our [reservation sheet](https://1drv.ms/x/s!Ag4kKioQJdg6gdA0-KhrKmJfd5yNCg?e=GRKsZ3) and take note of the same password for all accounts.
 
-Use your reserved user account, preferably in a dedicated browser profile/incognito browser mode, to access the [base app on your Business Central environment](https://businesscentral.dynamics.com/) & [Power Apps maker portal on your Dataverse environment](https://make.powerapps.com/), so you can perform the following exercises:
+Use your reserved user account, preferably in a dedicated browser profile/incognito browser mode, to access the [base app on your Business Central environment](https://businesscentral.dynamics.com/), [Power Apps maker portal on your Dataverse environment](https://make.powerapps.com/), [Power Automate maker portal on your Dataverse environment](https://make.powerautomate.com/), and the Power Pages site mapped to your dedicated company in our reservation sheet, so you can perform the following exercises:
 
 - [Create model-driven Power Apps w/ virtual tables](#model)
   - [Customize model-driven Power Apps w/ custom views](#view)
