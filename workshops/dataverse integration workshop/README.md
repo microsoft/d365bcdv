@@ -54,14 +54,14 @@ To customize model-driven Power Apps w/ custom views, follow these steps:
    ![Screenshot](../../images/search-for-sales-order-table.png)
  
 1.	Select the **Views** section and **+ New view** button.
-1.	Enter your unique view name, such as *YourAlias All Sales Orders*, and select the **Create** button to open Power Apps view designer.
+1.	Enter your unique view name, such as *YourAlias All Sales Orders View*, and select the **Create** button to open Power Apps view designer.
 1.	Select the **+ View column** button to add more columns to your view.
 
    ![Screenshot](../../images/add-more-view-columns.png)
 
 1.	Select the **Save and publish** button.
-1.	On Power Apps maker portal, select the **Apps** section and your *YourAlias Sales Order App* app.
-1.	Select the **All Sales Orders** dropdown menu and your *YourAlias All Sales Orders* view or the **Manage and share views** item to change your default view.
+1.	On Power Apps maker portal, select the **Apps** section and run *YourAlias Sales Order App*.
+1.	Select the **All Sales Orders** dropdown menu and *YourAlias All Sales Orders View* or the **Manage and share views** item to change your default view.
 
    ![Screenshot](../../images/change-all-sales-orders-view.png)
 
@@ -77,12 +77,12 @@ To customize model-driven Power Apps w/ custom forms, follow these steps:
    ![Screenshot](../../images/add-sales-order-form.png)
 
 1.	Select the **Form settings** button, **Security roles** section, **Everyone** radio button, **Fallback forms** section, **Enable "YourAlias Sales Order Main Form" form as a Fallback form** check box, and **Save and publish** button.
-1.	Ensure that *YourAlias Sales Order Main Form* is the only Fallback form for other **Main Form** forms.
-1.	On Power Apps maker portal, select the **Apps** section and edit your *YourAlias Sales Order App* app.
-1.	Select **Sales Orders form** section and remove all other **Main Form** forms in this app, except *YourAlias Sales Order Main Form*.
-10. Select the **Save and publish** button.
-11. On Power Apps maker portal, select the **Apps** section and your *Sales Order App YourAlias* app.
-12. Select any sales order to be viewed in your *YourAlias Sales Order Main Form* form.
+1.	Ensure that *YourAlias Sales Order Main Form* is the only Fallback form for other Main Forms.
+1.	On Power Apps maker portal, select the **Apps** section and edit *YourAlias Sales Order App*.
+1.	Select **Sales Orders form** section and remove all other Main Forms in this app, except *YourAlias Sales Order Main Form*.
+1. Select the **Save and publish** button.
+1. On Power Apps maker portal, select the **Apps** section and run *YourAlias Sales Order App*.
+1. Select any sales order to be viewed in *YourAlias Sales Order Main Form*.
 
 ### <a name="action"></a>Customize model-driven Power Apps w/ bound actions
 To customize model-driven Power Apps w/ bound actions, follow these steps:
