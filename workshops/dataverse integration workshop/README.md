@@ -125,7 +125,6 @@ To perform this exercise, follow these steps:
    ![Screenshot](../../images/add-dataverse-table-page.png)
 
 1. Select the **Select existing table** radio button, search for the **Contact** check box to check, and select the **Add** button.
-1. Select the **Account** dropdown menu, **Account forms** item, and **Edit form** button.
 1. Select the **Contacts form** section, **+ New form** button, **Main Form** radio button, and **Create** button to open Power Apps form designer.
 1. For the **Display Name** property, enter your unique form name, such as *YourAlias Contact Main Form*, and select table columns to add as fields in your form.
 1. Select the **Component** button, **Grid** dropdown menu, **Subgrid** item, **Show related records** check box, **Sales Orders (contactid)** item, and **Done** button.
