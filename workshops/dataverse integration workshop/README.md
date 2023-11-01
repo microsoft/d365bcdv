@@ -208,8 +208,14 @@ For this exercise, we’ve created Power Pages sites that are mapped to Business
    
 1. Drag & drop *BC Items* under the **Pages** section.
 1. Select the **List** item and **+ New list** button.
+
+   ![Screenshot](../../images/power-pages-add-list.png)
+   
 1. Search and select the **Item** table.
 1. Select the **All Items** view and **Done** button.
+
+   ![Screenshot](../../images/power-pages-add-list2.png)
+   
 1. Select the **Permission** button, **All Items** permission, and **Global access** type.
 1. Add the **Read** permission and **Anonymous Users** role.
 1. Select the **Save** and **Sync** buttons.
