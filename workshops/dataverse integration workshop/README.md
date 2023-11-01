@@ -251,14 +251,25 @@ On Power Pages maker portal, you can add Edit action to existing lists.
 1. On Power Pages Management portal, select the **Basic Forms** section and **+ New** button.
 1. Enter *YourAlias Sales Order Basic Form* for the **Name** property and *id* for the **Record ID Parameter Name** property.
 1. Select *Sales Order (dyn365bc_salesorder_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, and your mapped Power Pages site for the **Website* property.
+
+   ![Screenshot](../../images/power-pages-basic-form.png)
+   
 1. Select the **Save** button.
 1. On Power Pages Management portal, select the **List** section, **All Sales Orders** list, and **Options** tab.
 1. Select the **+ Edit** button in **Grid configuration** section.
 1. Select *Basic Form* for the **Target Type** property and *YourAlias Sales Order Basic Form* for the **Basic Form** property.
+
+   ![Screenshot](../../images/power-pages-basic-form-list.png)
+   
 1. Select the **Save** button.
-1. Since the default sales order form has been designed to include a subgrid of sales order lines, authenticated users also need to be assigned all except **Delete** *permissions to access the Sales Order Line table. 
+1. Since the default sales order form has been designed to include a subgrid of sales order lines, authenticated users also need to be assigned all except **Delete** *permissions to access the Sales Order Line table.
+
+   ![Screenshot](../../images/power-pages-add-authenticated-permission2.png)
+   
 1. Select the **Save** and **Sync** buttons.
 1. Select the **Preview** button to check that external users can edit the Sales Order lists from Business Central after signing in.
+
+   ![Screenshot](../../images/power-pages-authenticated-preview-edit-list.png)
 
 ## <a name="subgrid"></a>Add Edit action to Power Pages subgrids linked to lists
 On Power Pages maker portal, you can add Edit action to existing subgrids.
@@ -275,3 +286,4 @@ On Power Pages maker portal, you can add Edit action to existing subgrids.
 1. Select the **Save** and **Sync** buttons.
 1. Select the **Preview** button to check that external users can edit the Sales Order Line subgrids linked to Sales Order lists from Business Central after signing in.
 
+   ![Screenshot](../../images/power-pages-authenticated-preview-edit-subgrid.png)
