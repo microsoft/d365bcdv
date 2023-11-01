@@ -31,6 +31,10 @@ Use your reserved user account, preferably in a dedicated browser profile/incogn
 - [Create model-driven Power Apps w/ synthetic relations between native & virtual tables](#synthetic)
 - [Create Power Automate flows w/ data (CUD) event trigger for virtual table](#data)
 - [Create Power Automate flows w/ business event trigger](#business)
+- [Enable anonymous access to Business Central data for external users via Power Pages](#anonymous)
+- [Enable authenticated access to Business Central data for external users via Power Pages](#authenticated)
+- [Add Edit action to Power Pages lists](#list)
+- [Add Edit action to Power Pages subgrids linked to lists](#subgrid)
 
 ## <a name="model"></a>Create model-driven Power Apps w/ virtual tables
 In this exercise, you’ll learn to create model-driven Power Apps that can view, create, and modify sales orders in the virtual *Sales Order* table.  You’ll also learn to customize them w/ custom views/forms and bound actions.  To perform this exercise, follow these steps:
@@ -221,7 +225,7 @@ On Power Pages maker portal, you can sign in w/ your reserved user account and c
 1. Select the **Save** and **Sync** buttons.
 1. Select the **Preview** button to check that external users can see the Sales Order table from Business Central after signing in.
 
-## <a name="list"></a>Add Edit action to Power Pages lists
+c
 On Power Pages maker portal, you can add Edit action to existing lists.
 1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
 1. Select the **...** button below **Set up** button and **Power Pages Management** option that opens Power Pages Management portal in another tab.
@@ -238,7 +242,7 @@ On Power Pages maker portal, you can add Edit action to existing lists.
 1. Select the **Preview** button to check that external users can edit the Sales Order lists from Business Central after signing in.
 
 ## <a name="subgrid"></a>Add Edit action to Power Pages subgrids linked to lists
-On Power Pages maker portal, you can add Edit action to existing lists.
+On Power Pages maker portal, you can add Edit action to existing subgrids.
 1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
 1. Select the **...** button below **Set up** button and **Power Pages Management** option that opens Power Pages Management portal in another tab.
 1. On Power Pages Management portal, select the **Basic Forms** section and **+ New** button.
