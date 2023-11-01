@@ -218,8 +218,13 @@ For this exercise, we’ve created Power Pages sites that are mapped to Business
    
 1. Select the **Permission** button, **All Items** permission, and **Global access** type.
 1. Add the **Read** permission and **Anonymous Users** role.
+
+   ![Screenshot](../../images/power-pages-add-anonymous-permission.png)
+   
 1. Select the **Save** and **Sync** buttons.
 1. Select the **Preview** button to check that external users can see the Item table from Business Central w/o signing in.
+
+   ![Screenshot](../../images/power-pages-anonymous-preview.png)
 
 ## <a name="authenticated"></a>Enable authenticated access to Business Central data for external users via Power Pages
 On Power Pages maker portal, you can sign in w/ your reserved user account and configure Power Pages site that's mapped to your dedicated company to add a page that enables authenticated access to Business Central data for external users.
