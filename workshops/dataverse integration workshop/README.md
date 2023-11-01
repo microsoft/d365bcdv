@@ -235,7 +235,7 @@ On Power Pages maker portal, you can sign in w/ your reserved user account and c
 1. Search and select the **Sales Order** table.
 1. Select the **All Sales Orders** view and **Done** button.
 1. Select the **Permission** button, **All Sales Orders** permission, **Contact access** type, and *dyn365bc_contact2salesorder* synthetic relationship.
-1. Add all permissions except the **Delete** permission and **Authenticated Users** role.
+1. Add all except **Delete** permissions and **Authenticated Users** role.
 
    ![Screenshot](../../images/power-pages-add-authenticated-permission.png)
    
@@ -262,7 +262,7 @@ On Power Pages maker portal, you can add Edit action to existing lists.
    ![Screenshot](../../images/power-pages-basic-form-list.png)
    
 1. Select the **Save** button.
-1. Since the default sales order form has been designed to include a subgrid of sales order lines, authenticated users also need to be assigned all except **Delete** *permissions to access the Sales Order Line table.
+1. Since the default sales order form has been designed to include a subgrid of sales order lines, authenticated users also need to be assigned all except **Delete** permissions to access the Sales Order Line table.
 
    ![Screenshot](../../images/power-pages-add-authenticated-permission2.png)
    
