@@ -250,7 +250,7 @@ On Power Pages maker portal, you can add Edit action to existing lists.
 1. Select the **...** button below **Set up** button and **Power Pages Management** option that opens Power Pages Management portal in another tab.
 1. On Power Pages Management portal, select the **Basic Forms** section and **+ New** button.
 1. Enter *YourAlias Sales Order Basic Form* for the **Name** property and *id* for the **Record ID Parameter Name** property.
-1. Select *Sales Order (dyn365bc_salesorder_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, and your mapped Power Pages site for the **Website* property.
+1. Select *Sales Order (dyn365bc_salesorder_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, and your mapped Power Pages site for the **Website** property.
 
    ![Screenshot](../../images/power-pages-basic-form.png)
    
