@@ -206,7 +206,7 @@ For this exercise, we’ve created Power Pages sites that are mapped to Business
 1. Select the **Permission** button, **All Items** permission, and **Global access** type.
 1. Add the **Read** permission and **Anonymous Users** role.
 1. Select the **Save** and **Sync** buttons.
-1. Select the **Preview** button to check that external users can see the Item table in Business Central w/o signing in.
+1. Select the **Preview** button to check that external users can see the Item table from Business Central w/o signing in.
 
 ## <a name="authenticated"></a>Enable authenticated access to Business Central data for external users via Power Pages
 On Power Pages maker portal, you can sign in w/ your reserved user account and configure Power Pages site that's mapped to your dedicated company to add a page that enables authenticated access to Business Central data for external users.
@@ -219,10 +219,36 @@ On Power Pages maker portal, you can sign in w/ your reserved user account and c
 1. Select the **Permission** button, **All Sales Orders** permission, **Contact access** type, and *dyn365bc_contact2salesorder* synthetic relationship.
 1. Add all permissions except the **Delete** permission and **Authenticated Users** role.
 1. Select the **Save** and **Sync** buttons.
-1. Select the **Preview** button to check that external users can see the Sales Order table in Business Central after signing in.
+1. Select the **Preview** button to check that external users can see the Sales Order table from Business Central after signing in.
 
+## <a name="list"></a>Add Edit action to Power Pages lists
+On Power Pages maker portal, you can add Edit action to existing lists.
+1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
+1. Select the **...** button below **Set up** button and **Power Pages Management** option that opens Power Pages Management portal in another tab.
+1. On Power Pages Management portal, select the **Basic Forms** section and **+ New** button.
+1. Enter *YourAlias Sales Order Basic Form* for the **Name** property and *id* for the **Record ID Parameter Name** property.
+1. Select *Sales Order (dyn365bc_salesorder_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, and your mapped Power Pages site for the **Website* property.
+1. Select the **Save** button.
+1. On Power Pages Management portal, select the **List** section, **All Sales Orders** list, and **Options** tab.
+1. Select the **+ Edit** button in **Grid configuration** section.
+1. Select *Basic Form* for the **Target Type** property and *YourAlias Sales Order Basic Form* for the **Basic Form** property.
+1. Select the **Save** button.
+1. Since the default sales order form has been designed to include a subgrid of sales order lines, authenticated users also need to be assigned all except **Delete** *permissions to access the Sales Order Line table. 
+1. Select the **Save** and **Sync** buttons.
+1. Select the **Preview** button to check that external users can edit the Sales Order lists from Business Central after signing in.
 
-## <a name="business"></a>Create Power Automate flows w/ business event trigger
+## <a name="subgrid"></a>Add Edit action to Power Pages subgrids linked to lists
+On Power Pages maker portal, you can add Edit action to existing lists.
+1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
+1. Select the **...** button below **Set up** button and **Power Pages Management** option that opens Power Pages Management portal in another tab.
+1. On Power Pages Management portal, select the **Basic Forms** section and **+ New** button.
+1. Enter *YourAlias Sales Order Line Basic Form* for the **Name** property and *id* for the **Record ID Parameter Name** property.
+1. Select *Sales Order ine (dyn365bc_salesorderline_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, and your mapped Power Pages site for the **Website* property.
+1. Select the **Save** button.
+1. On Power Pages Management portal, select the **Basic Forms** section, *YourAlias Sales Order Basic Form*, **Basic Form Metadata** tab, and **+ New Basic Form Metadata** button.
+1. Select *Subgrid* for the **Type** property and *Subgrid_new_1* for the **Subgrid Name** property.
+1. Select the **+ Edit** button in **Grid configuration** section.
+1. Select *Basic Form* for the **Target Type** property and *YourAlias Sales Order Line Basic Form* for the **Basic Form** property.
+1. Select the **Save** and **Sync** buttons.
+1. Select the **Preview** button to check that external users can edit the Sales Order Line subgrids linked to Sales Order lists from Business Central after signing in.
 
-
-## <a name="business"></a>Create Power Automate flows w/ business event trigger
