@@ -277,12 +277,15 @@ On Power Pages maker portal, you can add Edit action to existing subgrids.
 1. Select the **...** button below **Set up** button and **Power Pages Management** option that opens Power Pages Management portal in another tab.
 1. On Power Pages Management portal, select the **Basic Forms** section and **+ New** button.
 1. Enter *YourAlias Sales Order Line Basic Form* for the **Name** property and *id* for the **Record ID Parameter Name** property.
-1. Select *Sales Order ine (dyn365bc_salesorderline_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, and your mapped Power Pages site for the **Website* property.
+1. Select *Sales Order ine (dyn365bc_salesorderline_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, and your mapped Power Pages site for the **Website** property.
 1. Select the **Save** button.
 1. On Power Pages Management portal, select the **Basic Forms** section, *YourAlias Sales Order Basic Form*, **Basic Form Metadata** tab, and **+ New Basic Form Metadata** button.
 1. Select *Subgrid* for the **Type** property and *Subgrid_new_1* for the **Subgrid Name** property.
 1. Select the **+ Edit** button in **Grid configuration** section.
 1. Select *Basic Form* for the **Target Type** property and *YourAlias Sales Order Line Basic Form* for the **Basic Form** property.
+
+   ![Screenshot](../../images/power-pages-basic-form-metadata.png)
+   
 1. Select the **Save** and **Sync** buttons.
 1. Select the **Preview** button to check that external users can edit the Sales Order Line subgrids linked to Sales Order lists from Business Central after signing in.
 
