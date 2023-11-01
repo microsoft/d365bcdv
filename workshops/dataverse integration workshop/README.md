@@ -236,9 +236,14 @@ On Power Pages maker portal, you can sign in w/ your reserved user account and c
 1. Select the **All Sales Orders** view and **Done** button.
 1. Select the **Permission** button, **All Sales Orders** permission, **Contact access** type, and *dyn365bc_contact2salesorder* synthetic relationship.
 1. Add all permissions except the **Delete** permission and **Authenticated Users** role.
+
+   ![Screenshot](../../images/power-pages-add-authenticated-permission.png)
+   
 1. Select the **Save** and **Sync** buttons.
 1. Select the **Preview** button to check that external users can see the Sales Order table from Business Central after signing in.
 
+   ![Screenshot](../../images/power-pages-authenticated-preview.png)
+   
 ## <a name="list"></a>Add Edit action to Power Pages lists
 On Power Pages maker portal, you can add Edit action to existing lists.
 1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
