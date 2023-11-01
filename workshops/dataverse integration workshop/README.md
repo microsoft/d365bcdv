@@ -18,7 +18,7 @@ For this workshop preparation, we’ve done the following:
 - Created several user accounts w/ their respective username/password to perform exercises on the paired environments that are accessible to them, for example creating/configuring model-driven Power Apps, Power Automate flows, and Power Pages sites
 - Created several contact accounts w/ their respective username/password to access Power Pages sites that have been created/configured by the above users
 
-To avoid conflicts when performing exercises, each user account has a dedicated company on its Business Central environment.  For example, the user *alans@XXXXXXXXX.OnMicrosoft.com* has been assigned the *SUPER* permission set to access his dedicated *Cronus ALANS* company.  To access the pre-generated/visible virtual tables, each user account has been assigned the *System Customizer* security role on its Dataverse environment.  Each contact account represents a customer of the dedicated company and can access a Power Pages site mapped to that company.  For example, the contact *alan* represents *Adatum Corporation*, which is a customer of *Cronus ALANS* company, and can access [the Power Pages site mapped to *Cronus ALANS*](https://site-duyrl.powerappsportals.com/).
+To avoid conflicts when performing exercises, each user account has a dedicated company on its Business Central environment.  For example, the user *alans@XXXXXXXXX.OnMicrosoft.com* has been assigned the *SUPER* permission set to access his dedicated *Cronus ALANS* company.  To access the pre-generated/visible virtual tables, each user account has been assigned the *System Customizer* security role on its Dataverse environment.  Each contact account represents a customer of the dedicated company and can access a Power Pages site mapped to that company.  For example, the contact *alan* represents *Adatum Corporation*, which is a customer of *Cronus ALANS* company, and can access the Power Pages site mapped to *Cronus ALANS*.
 
 To reserve your user/contact accounts, enter your name/alias in the "Reserved by" column, next to those accounts that are still available on our [reservation sheet](https://1drv.ms/x/s!XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX?e=XXXXXX) and take note of the same password for all accounts.
 
@@ -195,3 +195,34 @@ In this exercise, you’ll learn to create Power Automate flows w/ a business ev
 
    ![Screenshot](../../images/get-row-by-id-from-customer-blocked-event-payload.png)
 
+## <a name="anonymous"></a>Enable anonymous access to Business Central data for external users via Power Pages
+For this exercise, we’ve created Power Pages sites that are mapped to Business Central companies.  These companies are dedicated to and only accessible by their respective user accounts that you can reserve.  On Power Pages maker portal, you can sign in w/ your reserved user account and configure Power Pages site that's mapped to your dedicated company to add a page that enables anonymous access to Business Central data for external users.
+1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
+1. Select the **+ Page** button, enter *BC Items* as your page name, and select the **Add** button.
+1. Drag & drop *BC Items* under the **Pages** section.
+1. Select the **List** item and **+ New list** button.
+1. Search and select the **Item** table.
+1. Select the **All Items** view and **Done** button.
+1. Select the **Permission** button, **All Items** permission, and **Global access** type.
+1. Add the **Read** permission and **Anonymous Users** role.
+1. Select the **Save** and **Sync** buttons.
+1. Select the **Preview** button to check that external users can see the Item table in Business Central w/o signing in.
+
+## <a name="authenticated"></a>Enable authenticated access to Business Central data for external users via Power Pages
+On Power Pages maker portal, you can sign in w/ your reserved user account and configure Power Pages site that's mapped to your dedicated company to add a page that enables authenticated access to Business Central data for external users.
+1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
+1. Select the **+ Page** button, enter *BC Sales Orders* as your page name, and select the **Add** button.
+1. Drag & drop *BC Sales Orders* under the **Pages** section.
+1. Select the **List** item and **+ New list** button.
+1. Search and select the **Sales Order** table.
+1. Select the **All Sales Orders** view and **Done** button.
+1. Select the **Permission** button, **All Sales Orders** permission, **Contact access** type, and *dyn365bc_contact2salesorder* synthetic relationship.
+1. Add all permissions except the **Delete** permission and **Authenticated Users** role.
+1. Select the **Save** and **Sync** buttons.
+1. Select the **Preview** button to check that external users can see the Sales Order table in Business Central after signing in.
+
+
+## <a name="business"></a>Create Power Automate flows w/ business event trigger
+
+
+## <a name="business"></a>Create Power Automate flows w/ business event trigger
