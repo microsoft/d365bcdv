@@ -34,7 +34,7 @@ Use your reserved user account, preferably in a dedicated browser profile/incogn
 - [Enable anonymous access to Business Central data for external users via Power Pages](#anonymous)
 - [Enable authenticated access to Business Central data for external users via Power Pages](#authenticated)
 - [Add Edit action to Power Pages lists](#list)
-- [Add Edit action to Power Pages subgrids linked to lists](#subgrid)
+- [Add Edit action to Power Pages subgrids related to lists](#subgrid)
 
 ## <a name="model"></a>Create model-driven Power Apps w/ virtual tables
 In this exercise, you’ll learn to create model-driven Power Apps that can view, create, and modify sales orders in the virtual *Sales Order* table.  You’ll also learn to customize them w/ custom views/forms and bound actions.  To perform this exercise, follow these steps:
@@ -271,7 +271,7 @@ On Power Pages maker portal, you can add Edit action to existing lists.
 
    ![Screenshot](../../images/power-pages-authenticated-preview-edit-list.png)
 
-## <a name="subgrid"></a>Add Edit action to Power Pages subgrids linked to lists
+## <a name="subgrid"></a>Add Edit action to Power Pages subgrids related to lists
 On Power Pages maker portal, you can add Edit action to existing subgrids.
 1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
 1. Select the **...** button below **Set up** button and **Power Pages Management** option that opens Power Pages Management portal in another tab.
