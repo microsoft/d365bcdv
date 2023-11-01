@@ -203,6 +203,9 @@ In this exercise, you’ll learn to create Power Automate flows w/ a business ev
 For this exercise, we’ve created Power Pages sites that are mapped to Business Central companies.  These companies are dedicated to and only accessible by their respective user accounts that you can reserve.  On Power Pages maker portal, you can sign in w/ your reserved user account and configure Power Pages site that's mapped to your dedicated company to add a page that enables anonymous access to Business Central data for external users.
 1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
 1. Select the **+ Page** button, enter *BC Items* as your page name, and select the **Add** button.
+   
+   ![Screenshot](../../images/power-pages-add-page.png)
+   
 1. Drag & drop *BC Items* under the **Pages** section.
 1. Select the **List** item and **+ New list** button.
 1. Search and select the **Item** table.
