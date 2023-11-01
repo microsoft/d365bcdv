@@ -225,7 +225,7 @@ On Power Pages maker portal, you can sign in w/ your reserved user account and c
 1. Select the **Save** and **Sync** buttons.
 1. Select the **Preview** button to check that external users can see the Sales Order table from Business Central after signing in.
 
-c
+## <a name="list"></a>Add Edit action to Power Pages lists
 On Power Pages maker portal, you can add Edit action to existing lists.
 1. Go to Power Pages maker portal URL that comes w/ your reserved user account to configure Power Pages site that's mapped to your dedicated company.
 1. Select the **...** button below **Set up** button and **Power Pages Management** option that opens Power Pages Management portal in another tab.
