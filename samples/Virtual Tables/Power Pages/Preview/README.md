@@ -124,3 +124,25 @@ To create pages for anonymous access of external users, follow these steps:
 1. Select the **Preview** button to check that external users can see the *Item* table from Business Central without signing in.
 
    ![Screenshot](../../../../images/power-pages-anonymous-preview.png)
+
+## <a name="authenticated"></a>Enable authenticated access for external users via Power Pages
+To create pages for authenticated access of external users, follow these steps:
+1. On [Power Pages maker portal](https://make.powerpages.microsoft.com/), create a new B2B portal by selecting a template from the **Templates** section, and select the **Done** button.
+1. Select the **Edit** button for your portal.
+1. Select the **+ Page** button, enter a descriptive display name for your page, for example *BC Sales Orders* for a page showing the virtual Business Central *Sales Order* table, and select the **Add** button.
+1. Drag & drop *BC Sales Orders* under the **Pages** section.
+1. Select the **List** item and **+ New list** button.
+1. Search and select the virtual Business Central **Sales Order** table.
+1. Select the **All Sales Orders** view and **Done** button.
+1. Select the **Permission** button, **All Sales Orders** permission, **Contact access** type, and a synthetic relation between the native Dataverse *Contact* table and virtual Business Central *Sales Order* table, for example *dyn365bc_contact2salesorder*.
+1. Add all except **Delete** permissions and **Authenticated Users** role.  This enables external users to sign in to your portal with their contact use identity and *Business Central Virtual Table* plugin will use *Power Pages Authenticated External Users* app/S2S user to access data stored in Business Central online on their behalf.
+
+   ![Screenshot](../../../../images/power-pages-add-authenticated-permission.png)
+   
+1. Select the **Save** and **Sync** buttons.
+1. Select the **Preview** button to check that external users can see the **Sales Order** table from Business Central after signing in.
+
+   ![Screenshot](../../../../images/power-pages-authenticated-preview.png)
+
+## <a name="internal"></a>Enable authenticated access for internal users via Power Pages
+To create pages for authenticated access of internal users, follow the same steps as [Enable authenticated access for external users via Power Pages](#authenticated) section above and add **Administrators** role.  This enables internal users to sign in to your portal with their Microsoft Entra user identity and *Business Central Virtual Table* plugin will personify them using *Dynamics 365 Business Central for Virtual Tables* app/S2S user to access data stored in Business Central online.
