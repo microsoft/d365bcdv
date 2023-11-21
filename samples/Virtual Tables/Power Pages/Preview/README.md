@@ -65,3 +65,11 @@ To make virtual Business Central tables visible on Dataverse, follow these steps
 1. On the *Business Central Configuration* app, select the **Available Tables** section, virtual Business Central tables to be made visible, such as *Customer*/*Item*/*Sales Order*/*Sales Invoice*/*Sales Shipment*/*Vendor* tables, **Edit** button, **Visible** check box, and **Save** button.
 
    ![Screenshot](../../../../images/power-apps-business-central-configuration-available-tables.png)
+
+## <a name="lookup"></a>Add lookup columns on Dataverse Contact table
+Since Power Pages authentication is linked to Dataverse *Contact* table, external users who sign in as contacts from customer/vendor organizations should only access their customer/vendor -specific data.  This can be done by first adding lookup columns on Dataverse *Contact* table to the virtual Business Central *Customer*/*Vendor* tables.  To do so, follow these steps:
+1. On [Power Apps maker portal](https://make.powerapps.com/), select the **Tables** section, *Contact* table, **Columns** icon, and **+ New column** button.
+1. Enter a descriptive display name for the lookup column, for example *BC Customer*/*BC Vendor*, select *Lookup* for the **Data type** property, *Customer*/*Vendor* for the **Related table** property, and the **Save** button.
+
+   ![Screenshot](../../../../images/ power-apps-contact-table-add-lookup-columns.png)
+
