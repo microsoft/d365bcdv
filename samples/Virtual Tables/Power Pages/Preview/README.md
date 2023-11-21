@@ -183,3 +183,8 @@ To enable edit mode on Power Pages subgrids, follow these steps:
 1. Select the **Preview** button to check that external users can edit the Sales Order Line subgrids linked to Sales Order lists from Business Central after signing in.
 
    ![Screenshot](../../../../images/power-pages-authenticated-preview-edit-subgrid.png)
+
+## Current limitations and future improvements
+These are the current limitations for Power Pages on virtual tables that will be removed/improved in the near future:
+1. Anonymous access for external users via Power Pages supports read-only for now.
+1. Authenticated access for external users via Power Pages supports only lookups to customers/vendors of Business Central company configured in the virtual table global settings for now.
