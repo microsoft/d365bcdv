@@ -174,7 +174,7 @@ To enable edit mode on Power Pages subgrids, follow these steps:
 1. On [Power Pages maker portal](https://make.powerpages.microsoft.com/), select the **Edit** button for your portal, **...** button below **Set up** section, and **Power Pages Management** option that opens Power Pages Management portal in another tab.
 1. On Power Pages Management portal, select the **Basic Forms** section and **+ New** button.
 1. Enter a descriptive display name for the **Name** property, for example *YourAlias Sales Order Line Basic Form*, and *id* for the **Record ID Parameter Name** property.
-1. Select *Sales Order ine (dyn365bc_salesorderline_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, your portal name for the **Website** property, and **Save** button.
+1. Select *Sales Order Line (dyn365bc_salesorderline_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, your portal name for the **Website** property, and **Save** button.
 1. Select *YourAlias Sales Order Basic Form*, **Basic Form Metadata** tab, **+ New Basic Form Metadata** button, *Subgrid* for the **Type** property, *Subgrid_new_1* for the **Subgrid Name** property, **+ Edit** button in **Grid configuration** section, *Basic Form* for the **Target Type** property, and *YourAlias Sales Order Line Basic Form* for the **Basic Form** property.
 
    ![Screenshot](../../../../images/power-pages-basic-form-metadata.png)
