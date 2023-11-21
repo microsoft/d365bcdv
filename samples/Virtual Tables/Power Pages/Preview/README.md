@@ -73,3 +73,23 @@ Since Power Pages authentication is linked to Dataverse *Contact* table, externa
 
    ![Screenshot](../../../../images/power-apps-contact-table-add-lookup-columns.png)
 
+## <a name="synthetic"></a>Create synthetic relations for Dataverse Contact table
+Since Power Pages authentication is linked to Dataverse *Contact* table, external users who sign in as contacts from customer/vendor organizations should only access their customer/vendor -specific data.  Only rows in virtual Business Central tables that are associated with the signed-in contacts should be shown.  This can be done by creating synthetic relations between the native Dataverse *Contact* table and virtual Business Central tables, such as *Sales Order*/*Sales Invoice*/*Sales Shipment* tables.  To do so, follow these steps:
+1. On [Power Apps maker portal](https://make.powerapps.com/), first add lookup columns on Dataverse Contact table, see [Add lookup columns on Dataverse Contact table](#lookup) section above.
+1. Select the **Tables** section, *Contact* table, **Keys** icon, and **+ New key** button.
+1. Enter a descriptive display name for the key, for example *bccustomerkey*/*bcvendorkey*, select 
+*BC Customer*/*BC Vendor* for the **Columns** property, and the **Save** button.  If multiple contacts are associated with one customer, you can select more columns, such as *Business Phone*/*Email*, to show only rows in virtual Business Central tables that are associated with the specific signed-in contacts.
+1. Select the **Apps** section, and launch the *Business Central Configuration* app.
+
+   ![Screenshot](../../../../images/power-apps-business-central-configuration.png)
+
+1. On the *Business Central Configuration* app, select the **Table Relations** section, and **+ New** button.
+1. On the **General** tab, enter the appropriate property values.  For example, to create a synthetic relation between the native Dataverse *Contact* table and virtual Business Central *Sales Order* table, enter a descriptive display name for the **Relation Name** property, for example *dyn365bc_contact2salesorder*, *contact* for the **Native Table** property, the schema name of your key for the **Native Table Key** property, for example *cr7b3_bccustomerkey*, and *dyn365bc_salesorder_v2_0* for the **Virtual Table** property.
+
+   ![Screenshot](../../../../images/power-apps-business-central-configuration-table-relations-general.png)
+
+1. On the **Mappings** tab, enter the schema names of **Native columns** that map to those of **Virtual columns**.  For example, *cr7b3_bccustomerkey* that maps to *dyn365bc_customer_customerid*.
+
+   ![Screenshot](../../../../images/power-apps-business-central-configuration-table-relations-mappings.png)
+
+1. Select the **Save & Close** button.
