@@ -14,3 +14,31 @@ These external users are typically users from the customer/vendor organizations 
 Anonymous access via Power Pages allows external users to perform API operations on Business Central tables without signing in.  Authenticated access via Power Pages requires external users to sign in to perform API operations on Business Central tables or rows that are accessible to them.  Business Central admins can select only the necessary API operations, tables, and rows to be enabled for anonymous and authenticated access by external users.  Additionally, this feature also enables authenticated access via Power Pages for internal/existing Business Central users, similar to authenticated access via Power Apps/Automate. 
 
 This article highlights the new feature of Power Pages on virtual tables, the prerequisites and step-by-step instructions to preview it, as well as its current limitations/future improvements.
+
+## Prerequisites and step-by-step instructions
+To preview the new feature of Power Pages on virtual tables, you can/should:
+1. Create/upgrade a Business Central environment with *Dynamics 365 Business Central 2023 Wave 2 Release* (**23.1 or higher**).
+1. On Business Central app, use the assisted setup to connect your Business Central environment to a Dataverse environment, on which you want to make your Business Central tables available as virtual tables.  This will guide you to install the *Business Central Virtual Table* plugin from AppSource.  See [Connect Business Central online to Dataverse](#connect) section below.
+1. On Business Central app, admins can assign permission sets to the built-in app/service-to-service (S2S) users that will access data stored in Business Central online via Power Pages on behalf of anonymous and authenticated external users.  See [Assign permission sets to anonymous and authenticated external users](#s2s) section below.
+1. On Power Apps maker portal, launch the *Business Central Configuration* app to select virtual Business Central tables, such as *Customer*/*Item*/*Sales Order*/*Sales Invoice*/*Vendor* tables, and make them visible.  See [Make virtual Business Central tables visible on Dataverse](#visible) section below.
+1. On Power Apps maker portal, open the native Dataverse *Contact* table and add lookup columns to the virtual Business Central *Customer*/*Vendor* tables.  See [Add lookup columns on Dataverse Contact table](#lookup) section below.
+1. On the *Business Central Configuration* app, create synthetic relations between the native Dataverse *Contact* table and virtual Business Central tables, such as *Sales Order*/*Sales Invoice*/*Sales Shipment* tables.  See [Create synthetic relations for Dataverse Contact table](#synthetic) section below.
+1. On Power Pages maker portal, create pages for anonymous access of external users.  See [Enable anonymous access for external users via Power Pages](#anonymous) section below.
+1. On Power Pages maker portal, create pages for authenticated access of external users.  See [Enable authenticated access for external users via Power Pages](#authenticated) section below.
+1. (OPTIONAL) On Power Pages maker portal, create pages for authenticated access of internal users.  See [Enable authenticated access for internal users via Power Pages](#internal) section below.
+1. (OPTIONAL) On Power Pages maker portal, make virtual Business Central tables editable as Power Pages lists.  See [Enable edit mode on Power Pages lists](#editlist) section below.
+1. (OPTIONAL) On Power Pages maker portal, make virtual Business Central tables editable as Power Pages subgrids.  See [Enable edit mode on Power Pages subgrids](#editsubgrid) section below.
+
+## <a name="connect"></a>Connect Business Central online to Dataverse 
+To connect your Business Central environment to a Dataverse environment, on which you want to make your Business Central tables available as virtual tables, follow these steps:
+1. On [Business Central app](https://businesscentral.dynamics.com/), select the **Settings** icon, **Assisted setup** item, and **Set up a connection to Dataverse** item to open the **Dataverse Connection Setup** dialog.  
+1. On that dialog, flip the **Enable virtual tables and events** switch on, and select the **Next** button.
+
+   ![Screenshot](../../../../images/dataverse-connection-setup.png)
+
+1. Review the relevant terms and conditions, flip the **I accept** switch on, and select the **Next** button again.
+1. Specify your Dataverse environment URL, sign in as an administrator user, and select the **Next** button again.
+1. Install the *Business Central Virtual Table* plugin from AppSource, and finally select the **Finish** button.
+
+   ![Screenshot](../../../../images/virtual-table-plugin.png)
+
