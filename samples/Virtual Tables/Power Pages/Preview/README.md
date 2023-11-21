@@ -46,13 +46,13 @@ To connect your Business Central environment to a Dataverse environment, in whic
 Since external users have no Business Central license/entitlements, we’ve created built-in app/S2S users to access data stored in Business Central online on their behalf.  Permission sets can be assigned to these app/S2S users to control data access by external users.  To do so, follow these steps:
 1. On [Business Central app](https://businesscentral.dynamics.com/), search for and open the *Microsoft Entra Applications* page.  There are three built-in app/S2S users: *Dynamics 365 Business Central for Virtual Tables* for accessing data stored in Business Central online via Power Apps/Automate/Pages by personifying authenticated internal users, *Power Pages Anonymous External Users* for accessing data stored in Business Central online via Power Pages on behalf of anonymous external users, and *Power Pages Authenticated External Users* for accessing data stored in Business Central online via Power Pages on behalf of authenticated external users.
 
-   ![Screenshot](../../../images/power-pages-microsoft-entra-applications.png)
+   ![Screenshot](../../../../images/power-pages-microsoft-entra-applications.png)
 
 1. Open the *Power Pages Anonymous External Users* card, select *Enabled* for the **State** property, and assign permission sets with the appropriate scope for anonymous external users, for example read-only for certain tables and LOGIN permission set as a minimum.
 
-   ![Screenshot](../../../images/power-pages-microsoft-entra-application-for-anonymous-access.png)
+   ![Screenshot](../../../../images/power-pages-microsoft-entra-application-for-anonymous-access.png)
 
 1. Open the *Power Pages Authenticated External Users* card, select *Enabled* for the **State** property, and assign permission sets with the appropriate scope for authenticated external users, for example read-write for certain tables and LOGIN permission set as a minimum.
 
-   ![Screenshot](../../../images/power-pages-microsoft-entra-application-for-authenticated-access.png)
+   ![Screenshot](../../../../images/power-pages-microsoft-entra-application-for-authenticated-access.png)
 
