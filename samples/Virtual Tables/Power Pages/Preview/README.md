@@ -62,6 +62,6 @@ To make virtual Business Central tables visible on Dataverse, follow these steps
 
    ![Screenshot](../../../../images/power-apps-business-central-configuration.png)
 
-1. On the *Business Central Configuration* app, select the **Available Tables** section, virtual Business Central tables to be made visible, such as *Customer*/*Item*/*Sales Order*/*Sales Invoice*/*Vendor* tables, **Edit** button, **Visible** check box, and **Save** button.
+1. On the *Business Central Configuration* app, select the **Available Tables** section, virtual Business Central tables to be made visible, such as *Customer*/*Item*/*Sales Order*/*Sales Invoice*/*Sales Shipment*/*Vendor* tables, **Edit** button, **Visible** check box, and **Save** button.
 
    ![Screenshot](../../../../images/power-apps-business-central-configuration-available-tables.png)
