@@ -164,6 +164,11 @@ To enable edit mode on Power Pages lists, follow these steps:
 
    ![Screenshot](../../../../images/power-pages-add-authenticated-permission2.png)
 
+1. Select the **Save** and **Sync** buttons.
+1. Select the **Preview** button to check that external users can edit the Sales Order lists from Business Central after signing in.
+
+   ![Screenshot](../../../../images/power-pages-authenticated-preview-edit-list.png)
+
 ## <a name="editsubgrid"></a>Enable edit mode on Power Pages subgrids
 To enable edit mode on Power Pages subgrids, follow these steps:
 1. On [Power Pages maker portal](https://make.powerpages.microsoft.com/), select the **Edit** button for your portal, **...** button below **Set up** section, and **Power Pages Management** option that opens Power Pages Management portal in another tab.
@@ -178,8 +183,3 @@ To enable edit mode on Power Pages subgrids, follow these steps:
 1. Select the **Preview** button to check that external users can edit the Sales Order Line subgrids linked to Sales Order lists from Business Central after signing in.
 
    ![Screenshot](../../../../images/power-pages-authenticated-preview-edit-subgrid.png)
-
-1. Select the **Save** and **Sync** buttons.
-1. Select the **Preview** button to check that external users can edit the Sales Order lists from Business Central after signing in.
-
-   ![Screenshot](../../../../images/power-pages-authenticated-preview-edit-list.png)
