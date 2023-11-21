@@ -56,3 +56,12 @@ Since external users have no Business Central license/entitlements, we’ve crea
 
    ![Screenshot](../../../../images/power-pages-microsoft-entra-application-for-authenticated-access.png)
 
+## <a name="visible"></a>Make virtual Business Central tables visible on Dataverse
+To make virtual Business Central tables visible on Dataverse, follow these steps:
+1. On [Power Apps maker portal](https://make.powerapps.com/), select the **Apps** section, and launch the *Business Central Configuration* app.
+
+   ![Screenshot](../../../../images/power-apps-business-central-configuration.png)
+
+1. On the *Business Central Configuration* app, select the **Available Tables** section, virtual Business Central tables to be made visible, such as *Customer*/*Item*/*Sales Order*/*Sales Invoice*/*Vendor* tables, **Edit** button, **Visible** check box, and **Save** button.
+
+   ![Screenshot](../../../../images/power-apps-business-central-configuration-available-tables.png)
