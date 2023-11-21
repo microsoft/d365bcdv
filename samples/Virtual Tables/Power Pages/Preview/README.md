@@ -146,3 +146,25 @@ To create pages for authenticated access of external users, follow these steps:
 
 ## <a name="internal"></a>Enable authenticated access for internal users via Power Pages
 To create pages for authenticated access of internal users, follow the same steps as [Enable anonymous access for external users via Power Pages](#anonymous)/[Enable authenticated access for external users via Power Pages](#authenticated) sections above and add **Administrators** role.  This enables internal users to sign in to your portal with their Microsoft Entra user identity and *Business Central Virtual Table* plugin will personify them using *Dynamics 365 Business Central for Virtual Tables* app/S2S user to access data stored in Business Central online.
+
+## <a name="editlist "></a>Enable edit mode on Power Pages lists
+To enable edit mode on Power Pages lists, follow these steps:
+1. On [Power Pages maker portal](https://make.powerpages.microsoft.com/), select the **Edit** button for your portal, **...** button below **Set up** section, and **Power Pages Management** option that opens Power Pages Management portal in another tab.
+1. On Power Pages Management portal, select the **Basic Forms** section and **+ New** button.
+1. Enter a descriptive display name for the **Name** property, for example *YourAlias Sales Order Basic Form*, and *id* for the **Record ID Parameter Name** property.
+1. Select *Sales Order (dyn365bc_salesorder_v2_0)* for the **Table Name** property, *Information* for the **Form Name** property, *Edit* for the **Mode** property, *Query String* for the **Record Source Type** property, your portal name for the **Website** property, and **Save** button.
+
+   ![Screenshot](../../../../images/power-pages-basic-form.png)
+   
+1. Select the **List** section, **All Sales Orders** list, **Options** tab, **+ Edit** button in **Grid configuration** section, *Basic Form* for the **Target Type** property, *YourAlias Sales Order Basic Form* for the **Basic Form** property, and **Save** button.
+
+   ![Screenshot](../../../../images/power-pages-basic-form-list.png)
+   
+1. Since the default sales order form has been designed to include a subgrid of sales order lines, authenticated users also need to be assigned all except **Delete** permissions to access the virtual Business Central *Sales Order Line* table.
+
+   ![Screenshot](../../../../images/power-pages-add-authenticated-permission2.png)
+   
+1. Select the **Save** and **Sync** buttons.
+1. Select the **Preview** button to check that external users can edit the Sales Order lists from Business Central after signing in.
+
+   ![Screenshot](../../../../images/power-pages-authenticated-preview-edit-list.png)
