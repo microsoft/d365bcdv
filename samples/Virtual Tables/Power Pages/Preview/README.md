@@ -97,3 +97,30 @@ Since Power Pages authentication is linked to Dataverse *Contact* table, externa
 
 1. Select the **Save & Close** button.
 
+## <a name="anonymous"></a>Enable anonymous access for external users via Power Pages
+To create pages for anonymous access of external users, follow these steps:
+1. On [Power Pages maker portal](https://make.powerpages.microsoft.com/), create a new B2B portal by selecting a template from the **Templates** section, and select the **Done** button.
+1. Select the **Edit** button for your portal.
+1. Select the **+ Page** button, enter a descriptive display name for your page, for example *BC Items* for a page showing the virtual Business Central *Item* table, and select the **Add** button.
+   
+   ![Screenshot](../../../../images/power-pages-add-page.png)
+   
+1. Drag & drop *BC Items* under the **Pages** section.
+1. Select the **List** item and **+ New list** button.
+
+   ![Screenshot](../../../../images/power-pages-add-list.png)
+   
+1. Search and select the virtual Business Central *Item* table.
+1. Select the **All Items** view and **Done** button.
+
+   ![Screenshot](../../../../images/power-pages-add-list2.png)
+   
+1. Select the **Permission** button, **All Items** permission, and **Global access** type.
+1. Add the **Read** permission and **Anonymous Users** role.  This enables external users to visit your portal without signing in and *Business Central Virtual Table* plugin will use *Power Pages Anonymous External Users* app/S2S user to access data stored in Business Central online on their behalf.
+
+   ![Screenshot](../../../../images/power-pages-add-anonymous-permission.png)
+   
+1. Select the **Save** and **Sync** buttons.
+1. Select the **Preview** button to check that external users can see the *Item* table from Business Central without signing in.
+
+   ![Screenshot](../../../../images/power-pages-anonymous-preview.png)
