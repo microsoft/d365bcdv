@@ -18,7 +18,7 @@ This article highlights the new feature of Power Pages on virtual tables, the pr
 ## Prerequisites and step-by-step instructions
 To preview the new feature of Power Pages on virtual tables, you can/should:
 1. Create/upgrade a Business Central environment with *Dynamics 365 Business Central 2023 Wave 2 Release* (**23.1 or higher**).
-1. On Business Central app, use the assisted setup to connect your Business Central environment to a Dataverse environment, on which you want to make your Business Central tables available as virtual tables.  This will guide you to install the *Business Central Virtual Table* plugin from AppSource.  See [Connect Business Central online to Dataverse](#connect) section below.
+1. On Business Central app, use the assisted setup to connect your Business Central environment to a Dataverse environment, in which you want to make your Business Central tables available as virtual tables.  This will guide you to install the *Business Central Virtual Table* plugin from AppSource.  See [Connect Business Central online to Dataverse](#connect) section below.
 1. On Business Central app, admins can assign permission sets to the built-in app/service-to-service (S2S) users that will access data stored in Business Central online via Power Pages on behalf of anonymous and authenticated external users.  See [Assign permission sets to anonymous and authenticated external users](#s2s) section below.
 1. On Power Apps maker portal, launch the *Business Central Configuration* app to select virtual Business Central tables, such as *Customer*/*Item*/*Sales Order*/*Sales Invoice*/*Vendor* tables, and make them visible.  See [Make virtual Business Central tables visible on Dataverse](#visible) section below.
 1. On Power Apps maker portal, open the native Dataverse *Contact* table and add lookup columns to the virtual Business Central *Customer*/*Vendor* tables.  See [Add lookup columns on Dataverse Contact table](#lookup) section below.
@@ -30,7 +30,7 @@ To preview the new feature of Power Pages on virtual tables, you can/should:
 1. (OPTIONAL) On Power Pages maker portal, make virtual Business Central tables editable as Power Pages subgrids.  See [Enable edit mode on Power Pages subgrids](#editsubgrid) section below.
 
 ## <a name="connect"></a>Connect Business Central online to Dataverse 
-To connect your Business Central environment to a Dataverse environment, on which you want to make your Business Central tables available as virtual tables, follow these steps:
+To connect your Business Central environment to a Dataverse environment, in which you want to make your Business Central tables available as virtual tables, follow these steps:
 1. On [Business Central app](https://businesscentral.dynamics.com/), select the **Settings** icon, **Assisted setup** item, and **Set up a connection to Dataverse** item to open the **Dataverse Connection Setup** dialog.  
 1. On that dialog, flip the **Enable virtual tables and events** switch on, and select the **Next** button.
 
