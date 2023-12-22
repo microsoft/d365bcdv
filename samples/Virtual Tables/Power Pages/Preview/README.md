@@ -91,7 +91,7 @@ Since Power Pages authentication is linked to Dataverse *Contact* table, externa
 
    ![Screenshot](../../../../images/power-apps-business-central-configuration-table-relations-general.png)
 
-1. On the **Mappings** tab, enter the schema names of **Native columns** that map to those of **Virtual columns**.  For example, *cr7b3_bccustomerkey* that maps to *dyn365bc_customer_customerid*.
+1. On the **Mappings** tab, enter the schema names of **Native columns** that map to those of **Virtual columns**.  For example, *cr7b3_bccustomer* that maps to *dyn365bc_customer_customerid*.
 
    ![Screenshot](../../../../images/power-apps-business-central-configuration-table-relations-mappings.png)
 
